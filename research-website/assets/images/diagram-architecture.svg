@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-label="Placeholder system architecture diagram">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="480" rx="18" fill="#070f1f" stroke="rgba(255,255,255,0.16)"/>
+  <text x="40" y="52" fill="rgba(255,255,255,0.75)" font-family="system-ui,Segoe UI,Arial" font-size="18" font-weight="800">Architecture diagram (placeholder)</text>
+  <text x="40" y="78" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="13">Camera / RTSP ’ ML service (YOLO + BoT-SORT) ’ Reasoning ’ Backend ’ Dashboard</text>
+  <rect x="40" y="120" width="170" height="110" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="58" y="158" fill="rgba(255,255,255,0.78)" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="800">Ingestion</text>
+  <text x="58" y="182" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="12">Video stream</text>
+  <rect x="250" y="120" width="210" height="110" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="268" y="158" fill="rgba(255,255,255,0.78)" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="800">ML service</text>
+  <text x="268" y="182" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="12">Flask + YOLO + BoT-SORT</text>
+  <rect x="500" y="120" width="210" height="110" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="518" y="158" fill="rgba(255,255,255,0.78)" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="800">Reasoning</text>
+  <text x="518" y="182" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="12">Spatialtemporal rules</text>
+  <rect x="750" y="120" width="170" height="110" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="768" y="158" fill="rgba(255,255,255,0.78)" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="800">Backend</text>
+  <text x="768" y="182" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="12">Node + WS</text>
+  <path d="M210 175 H250" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M460 175 H500" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M710 175 H750" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+  <rect x="250" y="300" width="670" height="140" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="270" y="338" fill="rgba(255,255,255,0.78)" font-family="system-ui,Segoe UI,Arial" font-size="14" font-weight="800">Admin dashboard (placeholder panel)</text>
+  <text x="270" y="364" fill="rgba(255,255,255,0.45)" font-family="system-ui,Segoe UI,Arial" font-size="12">Web client subscribes to alert events; shows evidence thumbnails and operator actions.</text>
+</svg>

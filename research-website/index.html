@@ -1,0 +1,1411 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI-Enabled Lost and Found System with Adaptive Retrieval and Intelligent Security Monitoring: uncertainty-aware retrieval, multimodal validation, suspicious behavior detection, and device risk analytics."
+    />
+    <title>AI-Enabled Lost and Found System with Adaptive Retrieval and Intelligent Security Monitoring | Research Project 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Home">
+          <img class="brand-mark" src="assets/images/logo.svg" width="32" height="32" alt="" />
+          <span class="brand-text">
+            <span class="brand-title">Lost &amp; Found AI</span>
+            <span class="brand-subtitle">Final-Year Research Project</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            <span class="nav-toggle-lines" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div id="nav-links" class="nav-links nav-links-scroll">
+            <a href="#home" title="Home">Home</a>
+            <a href="#about" title="About">About</a>
+            <a href="#research" title="Research">Research</a>
+            <a href="#project-modules" title="Project Modules">Project Modules</a>
+            <a href="#results-discussion" title="Results and Discussion">Results</a>
+            <a href="#milestones" title="Milestones">Milestones</a>
+            <a href="#documents" title="Documents">Documents</a>
+            <a href="#presentations" title="Presentations">Presentations</a>
+            <a href="#team" title="Team">Team</a>
+            <a href="#contact" title="Contact">Contact</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <span class="theme-icon" aria-hidden="true"></span>
+            <span class="btn-text">Theme</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- 1. Home -->
+      <section id="home" class="hero doc-hero" aria-label="Home">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Research Project 2026</p>
+            <h1 class="hero-title">AI-Enabled Lost and Found System with Adaptive Retrieval and Intelligent Security Monitoring</h1>
+            <p class="hero-subtitle">
+              A unified AI-powered lost and found platform that improves item recovery through uncertainty-aware retrieval, proactive multimodal validation,
+              real-time suspicious behavior detection, and predictive device risk analytics.
+            </p>
+            <p class="hero-lede">
+              The proposed modular framework integrates adaptive retrieval, proactive validation, real-time monitoring, and predictive analytics to move
+              beyond reactive item matching toward <strong>proactive loss prevention</strong> and <strong>intelligent security monitoring</strong> in
+              real-world environments.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#research">Explore Research</a>
+              <a class="btn btn-ghost" href="#documents">View Documents</a>
+            </div>
+
+            <div class="hero-highlights" aria-label="Highlights">
+              <article class="card highlight-card">
+                <h3>Adaptive Item Retrieval</h3>
+                <p class="muted">Uncertainty-aware cascaded retrieval using MC Dropout, FAISS, and CLIP-based semantic re-ranking.</p>
+              </article>
+              <article class="card highlight-card">
+                <h3>Multimodal Validation</h3>
+                <p class="muted">Image, text, and voice quality validation with cross-modal consistency checking and explainable feedback.</p>
+              </article>
+              <article class="card highlight-card">
+                <h3>Security Monitoring</h3>
+                <p class="muted">Real-time suspicious behavior detection using YOLOv11, BoT-SORT tracking, and spatio-temporal rules.</p>
+              </article>
+              <article class="card highlight-card">
+                <h3>Risk Prediction</h3>
+                <p class="muted">Device behavior anomaly detection and XGBoost-based predictive analytics for proactive loss prevention.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal-delay-1" aria-hidden="true">
+            <img src="assets/images/hero-lost-found-visual.svg" width="560" height="420" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt stats-section" aria-label="Project highlights">
+        <div class="container">
+          <div class="stats-grid">
+            <article class="card stat-card reveal">
+              <p class="stat-value">0.8909</p>
+              <p class="stat-label">Precision@1</p>
+              <p class="muted stat-note">Achieved by the UACR + CLIP hybrid retrieval method.</p>
+            </article>
+            <article class="card stat-card reveal">
+              <p class="stat-value">90.4%</p>
+              <p class="stat-label">Validation Accuracy</p>
+              <p class="muted stat-note">Achieved by the proactive multimodal validation module on 500 submissions.</p>
+            </article>
+            <article class="card stat-card reveal">
+              <p class="stat-value">0.896</p>
+              <p class="stat-label">Item Precision</p>
+              <p class="muted stat-note">Achieved by YOLOv11 for object/item detection in suspicious behavior monitoring.</p>
+            </article>
+            <article class="card stat-card reveal">
+              <p class="stat-value">0.924</p>
+              <p class="stat-label">ROC-AUC</p>
+              <p class="muted stat-note">Achieved by XGBoost-based predictive lost item risk analytics.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. About -->
+      <section id="about" class="section doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 02</p>
+            <h2 class="doc-h2">About the Project</h2>
+            <p class="doc-lead">
+              Lost and found management remains a major challenge in public environments such as campuses, transport hubs, and commercial buildings.
+              Traditional systems depend mainly on manual reporting and keyword-based searching, which often fail when users provide incomplete
+              descriptions, low-quality images, or inconsistent information.
+            </p>
+          </header>
+
+          <div class="doc-two-col">
+            <div class="doc-block reveal">
+              <h3 class="doc-h3">AI-enabled framework</h3>
+              <p class="muted">
+                This project introduces an AI-enabled lost and found framework that integrates four intelligent modules:
+                <strong>Uncertainty-Aware Cascaded Retrieval</strong>, <strong>Proactive Multimodal Input Validation</strong>,
+                <strong>Real-Time Suspicious Behavior Detection</strong>, and <strong>Predictive Device Risk Analytics</strong>. Together, these
+                modules improve retrieval accuracy, validate submission quality, detect abnormal behavior, and support proactive prevention before
+                items are permanently lost.
+              </p>
+
+              <h3 class="doc-h3 doc-h3-spaced">Project highlights</h3>
+              <ul class="list">
+                <li><strong>Moves beyond manual and keyword-based lost and found systems</strong></li>
+                <li><strong>Combines image, text, voice, video, location, and device behavior data</strong></li>
+                <li><strong>Uses uncertainty-aware retrieval to improve matching reliability</strong></li>
+                <li><strong>Validates submissions before they enter the system</strong></li>
+                <li><strong>Detects suspicious behavior and predicts item loss risk in real time</strong></li>
+              </ul>
+            </div>
+
+            <div class="doc-block reveal">
+              <h3 class="doc-h3">Illustration / screenshot placeholder</h3>
+              <p class="muted">Replace the placeholder below with a UI screenshot or a system overview figure.</p>
+              <figure class="figure-placeholder" style="margin: 0.85rem 0 0;">
+                <img src="assets/images/placeholder-screenshot-dashboard.svg" width="960" height="420" alt="Placeholder: project UI or illustration" />
+                <figcaption class="muted">Placeholder — add your platform UI screenshot, architecture overview, or demo results.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="system-demo" class="section section-alt doc-section" aria-label="System Demonstration">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">System Demo</p>
+            <h2 class="doc-h2">System Demonstration</h2>
+            <p class="doc-lead">
+              Experience the AI-powered Lost and Found platform through a complete demonstration of the four main research components: item matching,
+              multimodal validation, lost item risk prediction, and suspicious behavior detection.
+            </p>
+          </header>
+
+          <div class="doc-two-col">
+            <div class="doc-block reveal">
+              <h3 class="doc-h3">What You’ll See in This Demo</h3>
+              <ol class="doc-objectives">
+                <li>
+                  <strong>Lost and Found Item Matching</strong><br />
+                  Demonstrates how the system matches lost and found item reports using image, text, and location data.
+                </li>
+                <li>
+                  <strong>Multimodal Submission Validation</strong><br />
+                  Shows how text, image, and voice inputs are validated to detect inconsistencies and fraudulent claims.
+                </li>
+                <li>
+                  <strong>Lost Item Risk Prediction</strong><br />
+                  Displays how device behavior patterns are analyzed to predict potential item loss.
+                </li>
+                <li>
+                  <strong>Suspicious Behavior Detection</strong><br />
+                  Shows how video analytics detect unattended items, loitering, running, and person-item interactions.
+                </li>
+              </ol>
+
+              <div style="margin-top: 1rem;">
+                <a class="btn btn-primary" href="#" rel="noopener">Watch Demo Video</a>
+              </div>
+            </div>
+
+            <div class="doc-block reveal">
+              <h3 class="doc-h3">Demo video (placeholder)</h3>
+              <p class="muted">Replace this card with an embedded video or link to your recorded demo.</p>
+              <a class="video-card" href="#" aria-label="Watch demo video">
+                <span class="video-card-inner" aria-hidden="true">
+                  <span class="video-play" aria-hidden="true"></span>
+                  <span class="video-meta">
+                    <span class="video-title">Lost &amp; Found Platform Demo</span>
+                    <span class="video-subtitle">Matching · Validation · Risk · Suspicious behavior alerts</span>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Research -->
+      <section id="research" class="section section-alt doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 03</p>
+            <h2 class="doc-h2">Research</h2>
+            <p class="doc-lead">
+              This section summarizes the research motivation, related work, objectives, and technical approach used to build an AI-powered Lost &amp;
+              Found system that supports retrieval, validation, prediction, and detection.
+            </p>
+          </header>
+
+          <div class="grid grid-2">
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">1) Research Gap &amp; Problem</h3>
+              <p class="muted">
+                <strong>Research gap:</strong> Existing lost and found systems are mostly reactive, manual, and keyword-based. They lack intelligent
+                quality control, uncertainty-aware retrieval, multimodal validation, real-time suspicious behavior monitoring, and predictive risk
+                analytics. Current systems often treat item recovery as a simple matching problem, but they do not properly handle ambiguous visual
+                inputs, incomplete descriptions, fraudulent claims, suspicious item-related behavior, or behavioral patterns that may indicate future
+                loss events.
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                <strong>Research problem:</strong> How can an AI-enabled lost and found system improve item matching reliability, validate multimodal
+                submissions, detect suspicious behavior, and predict potential item loss risks in real-world public environments?
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                The proposed solution addresses this problem through a unified modular architecture that combines adaptive retrieval, multimodal AI
+                validation, video-based behavioral monitoring, and predictive analytics.
+              </p>
+            </article>
+
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">2) Literature Survey</h3>
+              <p class="muted">
+                Traditional lost and found systems rely heavily on manual reporting and keyword-based searching. These systems perform poorly when user
+                descriptions are incomplete, images are unclear, or submitted information is inconsistent.
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                Recent studies in computer vision and machine learning show that image-based retrieval, multimodal learning, and uncertainty estimation
+                can improve matching reliability. However, fixed classification pipelines often fail under blur, occlusion, poor lighting, or visually
+                similar items. Entropy-based uncertainty estimation and MC Dropout help identify low-confidence predictions and guide adaptive retrieval
+                behavior.
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                Multimodal validation has become important because low-quality or fraudulent submissions can reduce system reliability. Image-text
+                alignment using CLIP, text coherence analysis using Sentence-BERT, object detection using YOLO, and voice transcription using Whisper can
+                help validate whether user inputs are complete and consistent.
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                In surveillance environments, suspicious activity is better detected through temporal behavior patterns rather than single-frame
+                decisions. Object detection combined with multi-object tracking and spatio-temporal rules can detect unattended items, loitering,
+                running, and owner-return events.
+              </p>
+              <p class="muted" style="margin-top: 0.65rem;">
+                For proactive loss prevention, anomaly detection and predictive analytics can identify abnormal device behavior before a confirmed loss
+                occurs. Isolation Forest can detect unusual behavior without labeled data, while XGBoost can predict the probability of item loss using
+                behavioral and spatio-temporal features.
+              </p>
+            </article>
+
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">3) Research Objectives</h3>
+              <p class="muted">
+                <strong>Main objective:</strong> To design and develop an AI-enabled lost and found system that improves item recovery, validates
+                submission quality, detects suspicious behavior, and predicts potential item loss through adaptive retrieval, multimodal intelligence,
+                temporal reasoning, and predictive analytics.
+              </p>
+              <h4 class="doc-h3" style="margin-top: 0.85rem;">Specific objectives</h4>
+              <ul class="list">
+                <li><strong>1.</strong> To develop an Uncertainty-Aware Cascaded Retrieval module that adapts item matching behavior based on classification uncertainty.</li>
+                <li><strong>2.</strong> To design a Proactive Multimodal Input Validation module that evaluates image quality, text completeness, voice clarity, and cross-modal consistency.</li>
+                <li><strong>3.</strong> To implement a Real-Time Suspicious Behavior Detection module that identifies unattended items, owner-return events, loitering, and running using video analytics.</li>
+                <li><strong>4.</strong> To develop a Device Behavior Anomaly Detection and Predictive Risk Analytics module that detects abnormal device behavior and predicts lost item risk.</li>
+                <li><strong>5.</strong> To integrate all modules into a unified web-based lost and found platform with real-time alerts, explainable feedback, and scalable system architecture.</li>
+              </ul>
+            </article>
+
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">4) System Architecture</h3>
+              <p class="muted">
+                The system is organized as a pipeline from heterogeneous inputs to actionable outputs: multimodal and behavioral data is collected, fused
+                through model-specific AI services, passed through a decision layer that unifies confidences and alerts, and finally surfaced as ranked
+                matches, feedback, and notifications.
+              </p>
+
+              <div
+                class="arch-pipeline"
+                role="region"
+                aria-label="Layered system architecture. CSS diagram; add PNGs under assets/images/ for detailed figures below."
+              >
+                <div class="arch-pipeline-ingress">
+                  <p class="arch-pipeline-kicker">Inputs</p>
+                  <p class="arch-pipeline-ingress-title">User Inputs / CCTV Streams / Device Behavior Data</p>
+                </div>
+
+                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
+
+                <section class="arch-pipeline-block" aria-labelledby="arch-layer-data">
+                  <h4 class="arch-pipeline-h" id="arch-layer-data">Data Collection Layer</h4>
+                  <ul class="arch-pipeline-list">
+                    <li>Lost item reports</li>
+                    <li>Found item reports</li>
+                    <li>Images</li>
+                    <li>Text descriptions</li>
+                    <li>Voice inputs</li>
+                    <li>CCTV/video streams</li>
+                    <li>Device behavior logs</li>
+                  </ul>
+                </section>
+
+                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
+
+                <section class="arch-pipeline-block" aria-labelledby="arch-layer-ai">
+                  <h4 class="arch-pipeline-h" id="arch-layer-ai">AI Processing Layer</h4>
+                  <ul class="arch-pipeline-list arch-pipeline-list--dense">
+                    <li>MobileNetV3 classification</li>
+                    <li>MC Dropout uncertainty estimation</li>
+                    <li>FAISS retrieval</li>
+                    <li>CLIP semantic re-ranking</li>
+                    <li>Multimodal validation</li>
+                    <li>YOLOv11 object detection</li>
+                    <li>BoT-SORT tracking</li>
+                    <li>Isolation Forest anomaly detection</li>
+                    <li>XGBoost risk prediction</li>
+                  </ul>
+                </section>
+
+                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
+
+                <section class="arch-pipeline-block" aria-labelledby="arch-layer-decision">
+                  <h4 class="arch-pipeline-h" id="arch-layer-decision">Decision Intelligence Layer</h4>
+                  <ul class="arch-pipeline-list">
+                    <li>Retrieval confidence</li>
+                    <li>Validation confidence</li>
+                    <li>Cross-modal discrepancy detection</li>
+                    <li>Suspicious behavior alerting</li>
+                    <li>Lost item risk scoring</li>
+                  </ul>
+                </section>
+
+                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
+
+                <section class="arch-pipeline-block" aria-labelledby="arch-layer-out">
+                  <h4 class="arch-pipeline-h" id="arch-layer-out">Output Layer</h4>
+                  <ul class="arch-pipeline-list">
+                    <li>Ranked item matches</li>
+                    <li>Validation feedback</li>
+                    <li>Security alerts</li>
+                    <li>Risk scores</li>
+                    <li>Admin dashboard notifications</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="arch-optional-figures" aria-label="Optional architecture diagram images">
+                <h4 class="doc-h3 arch-optional-figures-h">Optional architecture figures</h4>
+                <p class="muted arch-optional-lead">
+                  The CSS diagram above summarizes the end-to-end flow. For the final report, you can add high-resolution diagrams by placing PNG files in
+                  <code>assets/images/</code> (same filenames below). If a file is missing, a placeholder is shown until you add the image.
+                </p>
+                <div class="arch-optional-grid">
+                  <figure class="arch-optional-figure">
+                    <div class="arch-optional-frame">
+                      <img
+                        class="arch-optional-img"
+                        src="assets/images/system-architecture.png"
+                        width="800"
+                        height="450"
+                        alt="End-to-end system architecture diagram"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="arch-optional-fallback" hidden>
+                        <p class="muted small">Add <code>assets/images/system-architecture.png</code></p>
+                      </div>
+                    </div>
+                    <figcaption class="muted small">System overview</figcaption>
+                  </figure>
+                  <figure class="arch-optional-figure">
+                    <div class="arch-optional-frame">
+                      <img
+                        class="arch-optional-img"
+                        src="assets/images/uacr-pipeline.png"
+                        width="800"
+                        height="450"
+                        alt="UACR retrieval and matching pipeline"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="arch-optional-fallback" hidden>
+                        <p class="muted small">Add <code>assets/images/uacr-pipeline.png</code></p>
+                      </div>
+                    </div>
+                    <figcaption class="muted small">UACR pipeline</figcaption>
+                  </figure>
+                  <figure class="arch-optional-figure">
+                    <div class="arch-optional-frame">
+                      <img
+                        class="arch-optional-img"
+                        src="assets/images/validation-pipeline.png"
+                        width="800"
+                        height="450"
+                        alt="Multimodal validation pipeline"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="arch-optional-fallback" hidden>
+                        <p class="muted small">Add <code>assets/images/validation-pipeline.png</code></p>
+                      </div>
+                    </div>
+                    <figcaption class="muted small">Validation pipeline</figcaption>
+                  </figure>
+                  <figure class="arch-optional-figure">
+                    <div class="arch-optional-frame">
+                      <img
+                        class="arch-optional-img"
+                        src="assets/images/suspicious-behavior-flow.png"
+                        width="800"
+                        height="450"
+                        alt="Suspicious behavior detection and alerting flow"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="arch-optional-fallback" hidden>
+                        <p class="muted small">Add <code>assets/images/suspicious-behavior-flow.png</code></p>
+                      </div>
+                    </div>
+                    <figcaption class="muted small">Suspicious behavior flow</figcaption>
+                  </figure>
+                  <figure class="arch-optional-figure">
+                    <div class="arch-optional-frame">
+                      <img
+                        class="arch-optional-img"
+                        src="assets/images/device-risk-analytics.png"
+                        width="800"
+                        height="450"
+                        alt="Device behavior anomaly and risk analytics"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div class="arch-optional-fallback" hidden>
+                        <p class="muted small">Add <code>assets/images/device-risk-analytics.png</code></p>
+                      </div>
+                    </div>
+                    <figcaption class="muted small">Device risk analytics</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <p class="muted" style="margin-top: 0.85rem;">
+                For module-level implementation details, see <a href="#project-modules">Project Modules</a>.
+              </p>
+            </article>
+
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">5) Methodology</h3>
+              <div class="method-cards" aria-label="Methodology steps">
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">1</span>
+                  <div>
+                    <h4 class="doc-h3">Uncertainty-Aware Cascaded Retrieval</h4>
+                    <p class="muted">
+                      The system first classifies the input item image using a lightweight MobileNetV3-based classifier. MC Dropout is applied during
+                      inference to estimate uncertainty through entropy. Based on the uncertainty value, the system dynamically selects category-filtered
+                      search, expanded category search, or global search.
+                    </p>
+                  </div>
+                </div>
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">2</span>
+                  <div>
+                    <h4 class="doc-h3">FAISS and CLIP-Based Matching</h4>
+                    <p class="muted">
+                      Item image embeddings are compared using FAISS for fast nearest-neighbor retrieval. When uncertainty is high, CLIP-based semantic
+                      re-ranking is applied to improve retrieval reliability in ambiguous cases.
+                    </p>
+                  </div>
+                </div>
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">3</span>
+                  <div>
+                    <h4 class="doc-h3">Proactive Multimodal Validation</h4>
+                    <p class="muted">
+                      The validation module checks image sharpness, object detection confidence, text completeness, semantic coherence, voice quality, and
+                      transcription confidence. It also verifies image-text alignment using CLIP and detects discrepancies across brand, color, category,
+                      and location.
+                    </p>
+                  </div>
+                </div>
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">4</span>
+                  <div>
+                    <h4 class="doc-h3">Explainable Feedback Generation</h4>
+                    <p class="muted">
+                      Rejected or low-quality submissions are supported with explainable feedback using SHAP-based feature contribution analysis,
+                      allowing users to understand why their submission was flagged.
+                    </p>
+                  </div>
+                </div>
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">5</span>
+                  <div>
+                    <h4 class="doc-h3">Real-Time Suspicious Behavior Detection</h4>
+                    <p class="muted">
+                      Live video frames are processed using YOLOv11 for object detection and BoT-SORT for multi-object tracking. Spatio-temporal rules
+                      detect unattended items, owner returns, loitering near unattended items, and running behavior.
+                    </p>
+                  </div>
+                </div>
+                <div class="method-card">
+                  <span class="method-badge" aria-hidden="true">6</span>
+                  <div>
+                    <h4 class="doc-h3">Device Behavior Anomaly and Risk Prediction</h4>
+                    <p class="muted">
+                      Device behavior is represented using connectivity frequency, location transitions, session duration, hour-of-day, and day-of-week
+                      features. Isolation Forest detects abnormal behavior, while XGBoost predicts lost item risk using supervised learning and online
+                      model improvement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card-story reveal">
+              <h3 class="doc-h3">6) Technologies Used</h3>
+              <div class="tech-groups tech-groups--cards" aria-label="Technologies used by category">
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Frontend</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Backend and APIs</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">Flask</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express</span>
+                    <span class="tech-badge">WebSockets</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Retrieval and Matching</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">MobileNetV3</span>
+                    <span class="tech-badge">MC Dropout</span>
+                    <span class="tech-badge">Entropy Estimation</span>
+                    <span class="tech-badge">FAISS</span>
+                    <span class="tech-badge">CLIP</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Multimodal Validation</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">YOLOv11</span>
+                    <span class="tech-badge">Sentence-BERT</span>
+                    <span class="tech-badge">Whisper</span>
+                    <span class="tech-badge">CLIP</span>
+                    <span class="tech-badge">SHAP</span>
+                    <span class="tech-badge">Adaptive Fusion</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Suspicious Behavior Detection</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">YOLOv11</span>
+                    <span class="tech-badge">BoT-SORT</span>
+                    <span class="tech-badge">Spatio-Temporal Rule Engine</span>
+                    <span class="tech-badge">OpenCV</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Device Risk Analytics</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Isolation Forest</span>
+                    <span class="tech-badge">XGBoost</span>
+                    <span class="tech-badge">Online Learning</span>
+                    <span class="tech-badge">Spatio-Temporal Feature Engineering</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Database and Storage</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Redis</span>
+                    <span class="tech-badge">Supabase</span>
+                  </div>
+                </div>
+
+                <div class="tech-group">
+                  <h4 class="tech-cat-title">Deployment</h4>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Vercel</span>
+                    <span class="tech-badge">Railway</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Project Modules -->
+      <section id="project-modules" class="section doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 04</p>
+            <h2 class="doc-h2">Four Integrated AI Modules</h2>
+            <p class="doc-lead">
+              The proposed system integrates four AI-driven modules that work together to improve lost item recovery, ensure submission quality,
+              monitor suspicious behavior, and predict loss risk.
+            </p>
+          </header>
+
+          <div class="grid grid-2 module-grid">
+            <article class="card module-card reveal">
+              <div class="module-head">
+                <h3 class="module-title">Uncertainty-Aware Cascaded Retrieval</h3>
+                <span class="pill">Module 1</span>
+              </div>
+              <p class="muted">
+                This module improves image-based item matching by using classification uncertainty as a control signal. A MobileNetV3-based classifier
+                predicts the item category, while MC Dropout is applied during inference to estimate uncertainty through entropy. Based on the uncertainty
+                value, the system dynamically chooses between category-filtered FAISS search, expanded retrieval, and CLIP-based semantic re-ranking.
+              </p>
+              <div class="module-badges" aria-label="Module 1 technologies">
+                <span class="tech-badge">MobileNetV3</span>
+                <span class="tech-badge">MC Dropout</span>
+                <span class="tech-badge">Entropy Estimation</span>
+                <span class="tech-badge">FAISS</span>
+                <span class="tech-badge">CLIP</span>
+              </div>
+              <p class="muted module-subhead">Results</p>
+              <div class="module-badges" aria-label="Module 1 results">
+                <span class="tech-badge">P@1: 0.8909</span>
+                <span class="tech-badge">Recall@5: 0.9455</span>
+                <span class="tech-badge">Method: UACR + CLIP Hybrid</span>
+              </div>
+            </article>
+
+            <article class="card module-card reveal">
+              <div class="module-head">
+                <h3 class="module-title">Proactive Multimodal Input Validation</h3>
+                <span class="pill">Module 2</span>
+              </div>
+              <p class="muted">
+                This module validates lost and found submissions before they enter the system. It evaluates image sharpness, object detection confidence,
+                text completeness, text coherence, voice clarity, transcription confidence, and cross-modal consistency. CLIP is used for image-text
+                alignment, while SHAP supports explainable feedback generation.
+              </p>
+              <div class="module-badges" aria-label="Module 2 technologies">
+                <span class="tech-badge">YOLOv11</span>
+                <span class="tech-badge">Sentence-BERT</span>
+                <span class="tech-badge">Whisper</span>
+                <span class="tech-badge">CLIP</span>
+                <span class="tech-badge">SHAP</span>
+                <span class="tech-badge">Adaptive Fusion</span>
+              </div>
+              <p class="muted module-subhead">Results</p>
+              <div class="module-badges" aria-label="Module 2 results">
+                <span class="tech-badge">Validation Accuracy: 90.4%</span>
+                <span class="tech-badge">Precision: 96.3%</span>
+                <span class="tech-badge">Recall: 96.3%</span>
+                <span class="tech-badge">F1 Score: 0.90</span>
+                <span class="tech-badge">Cross-Modal Detection: 89.2%</span>
+                <span class="tech-badge">Spatial-Temporal Accuracy: 89.0%</span>
+              </div>
+            </article>
+
+            <article class="card module-card reveal">
+              <div class="module-head">
+                <h3 class="module-title">Real-Time Suspicious Behavior Detection</h3>
+                <span class="pill">Module 3</span>
+              </div>
+              <p class="muted">
+                This module converts CCTV/video streams into real-time alerts. YOLOv11 detects people and items, while BoT-SORT maintains object identities
+                over time. Rule-based spatio-temporal logic detects unattended items, owner-return events, loitering near unattended items, and running
+                behavior.
+              </p>
+              <div class="module-badges" aria-label="Module 3 technologies">
+                <span class="tech-badge">YOLOv11</span>
+                <span class="tech-badge">BoT-SORT</span>
+                <span class="tech-badge">Spatio-Temporal Rules</span>
+                <span class="tech-badge">WebSocket Alerts</span>
+              </div>
+              <p class="muted module-subhead">Alert Types</p>
+              <div class="module-badges" aria-label="Module 3 alert types">
+                <span class="tech-badge"><code>ITEM_UNATTENDED</code></span>
+                <span class="tech-badge"><code>OWNER_RETURNED</code></span>
+                <span class="tech-badge"><code>LOITER_NEAR_UNATTENDED</code></span>
+                <span class="tech-badge"><code>RUNNING</code></span>
+              </div>
+              <p class="muted module-subhead">Results</p>
+              <div class="module-badges" aria-label="Module 3 results">
+                <span class="tech-badge">YOLOv11 mAP@0.5:0.95: 0.329</span>
+                <span class="tech-badge">Precision: 0.874</span>
+                <span class="tech-badge">Recall: 0.776</span>
+                <span class="tech-badge">Item Precision: 0.896</span>
+              </div>
+            </article>
+
+            <article class="card module-card reveal">
+              <div class="module-head">
+                <h3 class="module-title">Device Behavior Anomaly Detection with Predictive Lost Item Risk Analytics</h3>
+                <span class="pill">Module 4</span>
+              </div>
+              <p class="muted">
+                This module predicts potential item loss by analyzing device behavior patterns such as connectivity frequency, location transitions,
+                session duration, hour-of-day, and day-of-week. Isolation Forest detects abnormal device behavior, and XGBoost predicts lost item risk.
+              </p>
+              <div class="module-badges" aria-label="Module 4 technologies">
+                <span class="tech-badge">Isolation Forest</span>
+                <span class="tech-badge">XGBoost</span>
+                <span class="tech-badge">Online Learning</span>
+                <span class="tech-badge">Spatio-Temporal Features</span>
+              </div>
+              <p class="muted module-subhead">Results</p>
+              <div class="module-badges" aria-label="Module 4 results">
+                <span class="tech-badge">Isolation Forest Accuracy: 89.1%</span>
+                <span class="tech-badge">Isolation Forest AUC: 0.937</span>
+                <span class="tech-badge">XGBoost Accuracy: 87.3%</span>
+                <span class="tech-badge">XGBoost Precision: 0.851</span>
+                <span class="tech-badge">XGBoost Recall: 0.889</span>
+                <span class="tech-badge">XGBoost F1: 0.869</span>
+                <span class="tech-badge">XGBoost ROC-AUC: 0.924</span>
+                <span class="tech-badge">Online Learning Improvement: +4.2%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results and Discussion (between Project Modules and Milestones) -->
+      <section id="results-discussion" class="section section-alt doc-section" aria-label="Results and Discussion">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 05</p>
+            <h2 class="doc-h2">Results and Discussion</h2>
+            <p class="doc-lead">Quantitative results from the evaluation experiments across retrieval, validation, video analytics, and device risk models.</p>
+          </header>
+
+          <div class="grid grid-2 results-grid">
+            <article class="card result-card reveal">
+              <h3 class="doc-h3">Retrieval Performance</h3>
+              <p class="muted">
+                The UACR + CLIP hybrid method achieved the best retrieval performance with Precision@1 of 0.8909 and Recall@5 of 0.9455. This outperformed
+                the FAISS baseline and the UACR-only method by improving retrieval reliability in visually ambiguous cases.
+              </p>
+              <div class="result-table-wrap" role="region" aria-label="Retrieval performance comparison" tabindex="0">
+                <table class="result-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Method</th>
+                      <th scope="col">P@1</th>
+                      <th scope="col">Recall@5</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">FAISS Baseline</th>
+                      <td>0.7636</td>
+                      <td>0.8727</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">UACR Proposed</th>
+                      <td>0.7818</td>
+                      <td>0.8545</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">UACR + CLIP Hybrid</th>
+                      <td>0.8909</td>
+                      <td>0.9455</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card result-card reveal">
+              <h3 class="doc-h3">Multimodal Validation Performance</h3>
+              <p class="muted">
+                The validation module achieved 90.4% overall accuracy and F1 score of 0.90 on 500 real-world lost and found submissions. It also detected
+                89.2% of deliberate image-text mismatches.
+              </p>
+              <div class="result-table-wrap" role="region" aria-label="Multimodal validation metrics" tabindex="0">
+                <table class="result-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Metric</th>
+                      <th scope="col">Result</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Overall Accuracy</th>
+                      <td>90.4%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Precision</th>
+                      <td>96.3%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Recall</th>
+                      <td>96.3%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">F1 Score</th>
+                      <td>0.90</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Cross-Modal Detection</th>
+                      <td>89.2%</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Spatial-Temporal Accuracy</th>
+                      <td>89.0%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card result-card reveal">
+              <h3 class="doc-h3">Suspicious Behavior Detection Performance</h3>
+              <p class="muted">
+                YOLOv11 improved item precision compared to YOLOv8, reducing false unattended-object alerts. Temporal reasoning and tracking helped improve
+                behavior detection reliability.
+              </p>
+              <div class="result-table-wrap" role="region" aria-label="Suspicious behavior detection model comparison" tabindex="0">
+                <table class="result-table result-table--wide">
+                  <thead>
+                    <tr>
+                      <th scope="col">Model</th>
+                      <th scope="col">mAP@0.5:0.95</th>
+                      <th scope="col">Precision</th>
+                      <th scope="col">Recall</th>
+                      <th scope="col">Item Precision</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">YOLOv8</th>
+                      <td>0.306</td>
+                      <td>0.879</td>
+                      <td>0.814</td>
+                      <td>0.858</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">YOLOv11</th>
+                      <td>0.329</td>
+                      <td>0.874</td>
+                      <td>0.776</td>
+                      <td>0.896</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card result-card reveal">
+              <h3 class="doc-h3">Device Risk Analytics Performance</h3>
+              <p class="muted">
+                Isolation Forest achieved the best anomaly detection performance with an AUC of 0.937. XGBoost achieved the best risk prediction performance
+                with ROC-AUC of 0.924.
+              </p>
+              <h4 class="result-table-caption">Anomaly detection</h4>
+              <div class="result-table-wrap" role="region" aria-label="Anomaly detection model comparison" tabindex="0">
+                <table class="result-table result-table--wide">
+                  <thead>
+                    <tr>
+                      <th scope="col">Model</th>
+                      <th scope="col">Accuracy</th>
+                      <th scope="col">FPR</th>
+                      <th scope="col">AUC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">OCSVM</th>
+                      <td>82.4%</td>
+                      <td>11.2%</td>
+                      <td>0.871</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">LOF</th>
+                      <td>84.7%</td>
+                      <td>8.6%</td>
+                      <td>0.896</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Isolation Forest</th>
+                      <td>89.1%</td>
+                      <td>5.3%</td>
+                      <td>0.937</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4 class="result-table-caption">Risk prediction</h4>
+              <div class="result-table-wrap" role="region" aria-label="Risk prediction model comparison" tabindex="0">
+                <table class="result-table result-table--extra-wide">
+                  <thead>
+                    <tr>
+                      <th scope="col">Model</th>
+                      <th scope="col">Accuracy</th>
+                      <th scope="col">Precision</th>
+                      <th scope="col">Recall</th>
+                      <th scope="col">F1</th>
+                      <th scope="col">ROC-AUC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Logistic Regression</th>
+                      <td>79.6%</td>
+                      <td>0.772</td>
+                      <td>0.801</td>
+                      <td>0.889</td>
+                      <td>0.863</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Random Forest</th>
+                      <td>83.2%</td>
+                      <td>0.801</td>
+                      <td>0.834</td>
+                      <td>0.817</td>
+                      <td>0.891</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">XGBoost</th>
+                      <td>87.3%</td>
+                      <td>0.851</td>
+                      <td>0.889</td>
+                      <td>0.869</td>
+                      <td>0.924</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Milestones -->
+      <section id="milestones" class="section doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 06</p>
+            <h2 class="doc-h2">Milestones</h2>
+            <p class="doc-lead">
+              A professional research journey timeline. Update the <strong>Date</strong> and <strong>Weight</strong> fields with your official schedule and marks.
+            </p>
+          </header>
+
+          <div class="timeline">
+            <article class="timeline-item card reveal">
+              <div class="timeline-head">
+                <h3 class="doc-h3">1. Project Proposal</h3>
+                <span class="status-badge status-completed">Completed</span>
+              </div>
+              <dl class="timeline-meta">
+                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
+                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
+              </dl>
+              <p class="muted">Initial research proposal including problem statement, objectives, methodology, and project plan.</p>
+            </article>
+
+            <article class="timeline-item card reveal">
+              <div class="timeline-head">
+                <h3 class="doc-h3">2. Progress Presentation 1</h3>
+                <span class="status-badge status-completed">Completed</span>
+              </div>
+              <dl class="timeline-meta">
+                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
+                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
+              </dl>
+              <p class="muted">First progress evaluation covering initial implementation and component-level development.</p>
+            </article>
+
+            <article class="timeline-item card reveal">
+              <div class="timeline-head">
+                <h3 class="doc-h3">3. Progress Presentation 2</h3>
+                <span class="status-badge status-completed">Completed</span>
+              </div>
+              <dl class="timeline-meta">
+                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
+                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
+              </dl>
+              <p class="muted">Second progress evaluation covering system integration, model improvements, and testing.</p>
+            </article>
+
+            <article class="timeline-item card reveal">
+              <div class="timeline-head">
+                <h3 class="doc-h3">4. Final Report</h3>
+                <span class="status-badge status-pending">Pending / Completed</span>
+              </div>
+              <dl class="timeline-meta">
+                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
+                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
+              </dl>
+              <p class="muted">Complete research documentation including methodology, implementation, results, and conclusion.</p>
+            </article>
+
+            <article class="timeline-item card reveal">
+              <div class="timeline-head">
+                <h3 class="doc-h3">5. Final Viva</h3>
+                <span class="status-badge status-pending">Pending</span>
+              </div>
+              <dl class="timeline-meta">
+                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
+                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
+              </dl>
+              <p class="muted">Final oral examination and project demonstration.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="section section-alt doc-section" aria-label="Research Achievements">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 07</p>
+            <h2 class="doc-h2">Research Achievements</h2>
+            <p class="doc-lead">Highlights of technical contributions and outcomes from the AI-enabled lost and found framework.</p>
+          </header>
+
+          <div class="grid grid-2 achievements-grid">
+            <article class="card card-feature reveal">
+              <h3 class="doc-h3">Adaptive Retrieval Innovation</h3>
+              <p class="muted">
+                The system uses uncertainty-aware cascaded retrieval with MC Dropout, FAISS, and CLIP re-ranking to improve item matching reliability.
+              </p>
+            </article>
+            <article class="card card-feature reveal">
+              <h3 class="doc-h3">Proactive Quality Control</h3>
+              <p class="muted">
+                The platform validates image, text, and voice inputs before accepting submissions, reducing low-quality and inconsistent records.
+              </p>
+            </article>
+            <article class="card card-feature reveal">
+              <h3 class="doc-h3">Intelligent Security Monitoring</h3>
+              <p class="muted">
+                YOLOv11, BoT-SORT tracking, and spatio-temporal reasoning enable real-time detection of unattended items and abnormal behavior.
+              </p>
+            </article>
+            <article class="card card-feature reveal">
+              <h3 class="doc-h3">Predictive Loss Prevention</h3>
+              <p class="muted">
+                Isolation Forest and XGBoost enable proactive lost item risk detection using behavioral and spatio-temporal device data.
+              </p>
+            </article>
+          </div>
+
+          <div class="achievements-key card reveal">
+            <h3 class="doc-h3">Key contributions</h3>
+            <ul class="list achievements-key-list">
+              <li>Unified lost and found framework</li>
+              <li>Uncertainty-aware retrieval decision making</li>
+              <li>Multimodal validation with explainable feedback</li>
+              <li>Real-time suspicious behavior monitoring</li>
+              <li>Device behavior anomaly detection and predictive risk analytics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Documents -->
+      <section id="documents" class="section doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 08</p>
+            <h2 class="doc-h2">Research Documentation</h2>
+            <p class="doc-lead">
+              Access the project documents, reports, presentations, and research materials related to the development and evaluation of the AI-powered
+              Lost and Found system.
+            </p>
+          </header>
+
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <h3 class="doc-h3">Research Paper</h3>
+              <p class="muted">
+                Final research paper describing the AI-enabled lost and found system, adaptive retrieval, multimodal validation, suspicious behavior
+                detection, and predictive risk analytics.
+              </p>
+              <a class="btn btn-secondary" href="assets/documents/research-paper.pdf" target="_blank" rel="noopener">View Paper</a>
+              <p class="muted small">Link: <code>assets/documents/research-paper.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Project Charter</h3>
+              <p class="muted">Initial project scope, team details, and research direction.</p>
+              <a class="btn btn-secondary" href="assets/documents/project-charter.pdf" target="_blank" rel="noopener">View Document</a>
+              <p class="muted small">Link: <code>assets/documents/project-charter.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Proposal Document</h3>
+              <p class="muted">Research problem, objectives, literature review, and proposed methodology.</p>
+              <a class="btn btn-secondary" href="assets/documents/proposal-document.pdf" target="_blank" rel="noopener">View Document</a>
+              <p class="muted small">Link: <code>assets/documents/proposal-document.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Checklist Documents</h3>
+              <p class="muted">Assessment checklist documents and progress evaluation materials.</p>
+              <a class="btn btn-secondary" href="assets/documents/checklist-documents.pdf" target="_blank" rel="noopener">View Document</a>
+              <p class="muted small">Link: <code>assets/documents/checklist-documents.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Final Report</h3>
+              <p class="muted">Complete final research report including implementation, testing, results, and conclusion.</p>
+              <a class="btn btn-secondary" href="assets/documents/final-report.pdf" target="_blank" rel="noopener">View Document</a>
+              <p class="muted small">Link: <code>assets/documents/final-report.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Log Books</h3>
+              <p class="muted">Individual research activity logs and development progress records.</p>
+              <a class="btn btn-secondary" href="assets/documents/log-books.pdf" target="_blank" rel="noopener">View Document</a>
+              <p class="muted small">Link: <code>assets/documents/log-books.pdf</code></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Presentations -->
+      <section id="presentations" class="section section-alt doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 09</p>
+            <h2 class="doc-h2">Presentation Slides</h2>
+            <p class="doc-lead">View the presentation slides used during project evaluations and research progress assessments.</p>
+          </header>
+
+          <div class="grid grid-3">
+            <article class="card reveal">
+              <h3 class="doc-h3">Proposal Presentation</h3>
+              <p class="muted">Initial presentation covering the research problem, objectives, and proposed solution.</p>
+              <a class="btn btn-secondary" href="assets/slides/proposal-presentation.pdf" target="_blank" rel="noopener">View Slides</a>
+              <p class="muted small">Link: <code>assets/slides/proposal-presentation.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Progress Presentation 1</h3>
+              <p class="muted">First progress presentation covering early implementation and component development.</p>
+              <a class="btn btn-secondary" href="assets/slides/progress-presentation-1.pdf" target="_blank" rel="noopener">View Slides</a>
+              <p class="muted small">Link: <code>assets/slides/progress-presentation-1.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Progress Presentation 2</h3>
+              <p class="muted">Second progress presentation covering system integration, improvements, and testing.</p>
+              <a class="btn btn-secondary" href="assets/slides/progress-presentation-2.pdf" target="_blank" rel="noopener">View Slides</a>
+              <p class="muted small">Link: <code>assets/slides/progress-presentation-2.pdf</code></p>
+            </article>
+            <article class="card reveal">
+              <h3 class="doc-h3">Final Presentation</h3>
+              <p class="muted">Final presentation covering the complete system, research outcomes, and evaluation.</p>
+              <a class="btn btn-secondary" href="assets/slides/final-presentation.pdf" target="_blank" rel="noopener">View Slides</a>
+              <p class="muted small">Link: <code>assets/slides/final-presentation.pdf</code></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. Team -->
+      <section id="team" class="section doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 10</p>
+            <h2 class="doc-h2">Meet Our Research Team</h2>
+            <p class="doc-lead">
+              A collaborative research project developed by undergraduate researchers with academic guidance from supervisors and co-supervisors.
+            </p>
+          </header>
+
+          <h3 class="doc-h3 reveal">Research Supervisors</h3>
+          <div class="grid grid-3 people-grid">
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Supervisor profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Designation: Add designation</p>
+                </div>
+              </div>
+              <dl class="person-meta">
+                <div><dt>Role</dt><dd>Supervisor</dd></div>
+                <div><dt>Department</dt><dd class="muted">Add department</dd></div>
+                <div><dt>Email</dt><dd class="muted">Add email</dd></div>
+              </dl>
+            </article>
+
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Co-supervisor profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Designation: Add designation</p>
+                </div>
+              </div>
+              <dl class="person-meta">
+                <div><dt>Role</dt><dd>Co-Supervisor</dd></div>
+                <div><dt>Department</dt><dd class="muted">Add department</dd></div>
+                <div><dt>Email</dt><dd class="muted">Add email</dd></div>
+              </dl>
+            </article>
+          </div>
+
+          <h3 class="doc-h3 doc-h3-spaced reveal">Research Team Members</h3>
+          <div class="grid grid-2 people-grid">
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Team member profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Student ID: Add ID</p>
+                </div>
+              </div>
+              <p class="muted"><strong>Role:</strong> Component 1 - Uncertainty-Aware Multimodal Item Retrieval</p>
+              <p class="muted"><strong>Email:</strong> Add email</p>
+            </article>
+
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Team member profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Student ID: Add ID</p>
+                </div>
+              </div>
+              <p class="muted"><strong>Role:</strong> Component 2 - Multimodal Input Validation and Fraud Detection</p>
+              <p class="muted"><strong>Email:</strong> Add email</p>
+            </article>
+
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Team member profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Student ID: Add ID</p>
+                </div>
+              </div>
+              <p class="muted"><strong>Role:</strong> Component 3 - Device Behavior Anomaly Detection and Lost Item Risk Prediction</p>
+              <p class="muted"><strong>Email:</strong> Add email</p>
+            </article>
+
+            <article class="card person-card reveal">
+              <div class="person-head">
+                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="Team member profile placeholder" />
+                <div>
+                  <h4 class="doc-h3">Add name</h4>
+                  <p class="muted">Student ID: Add ID</p>
+                </div>
+              </div>
+              <p class="muted"><strong>Role:</strong> Component 4 - Suspicious Behavior Detection Using Video Analytics</p>
+              <p class="muted"><strong>Email:</strong> Add email</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Contact -->
+      <section id="contact" class="section section-alt doc-section">
+        <div class="container">
+          <header class="doc-section-header reveal">
+            <p class="doc-kicker">Section 11</p>
+            <h2 class="doc-h2">Get In Touch</h2>
+            <p class="doc-lead">Have questions about our research or interested in collaboration? Reach out to our research team.</p>
+          </header>
+
+          <div class="grid grid-2">
+            <article class="card reveal">
+              <h3 class="doc-h3">Contact Information</h3>
+              <dl class="kv">
+                <div>
+                  <dt>Address</dt>
+                  <dd class="muted">Sri Lanka Institute of Information Technology, Malabe, Sri Lanka</dd>
+                </div>
+                <div>
+                  <dt>Email</dt>
+                  <dd class="muted">Add project email</dd>
+                </div>
+                <div>
+                  <dt>Phone</dt>
+                  <dd class="muted">Add phone number</dd>
+                </div>
+              </dl>
+
+              <h3 class="doc-h3 doc-h3-spaced">Research Areas</h3>
+              <div class="tech-badges" aria-label="Research areas">
+                <span class="tech-badge">Artificial Intelligence</span>
+                <span class="tech-badge">Computer Vision</span>
+                <span class="tech-badge">Natural Language Processing</span>
+                <span class="tech-badge">Anomaly Detection</span>
+                <span class="tech-badge">Video Analytics</span>
+                <span class="tech-badge">Lost and Found Systems</span>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <h3 class="doc-h3">Contact Form</h3>
+              <form action="#" method="post">
+                <div class="kv">
+                  <div>
+                    <label for="name"><strong>Name</strong></label>
+                    <div><input id="name" class="form-control" name="name" type="text" autocomplete="name" required /></div>
+                  </div>
+                  <div>
+                    <label for="email"><strong>Email</strong></label>
+                    <div><input id="email" class="form-control" name="email" type="email" autocomplete="email" required /></div>
+                  </div>
+                  <div>
+                    <label for="subject"><strong>Subject</strong></label>
+                    <div><input id="subject" class="form-control" name="subject" type="text" autocomplete="off" required /></div>
+                  </div>
+                  <div>
+                    <label for="message"><strong>Message</strong></label>
+                    <div><textarea id="message" class="form-control" name="message" rows="5" required></textarea></div>
+                  </div>
+                  <div>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                    <p class="muted form-help">Static website: this form shows a success message after validation (no backend submission).</p>
+                  </div>
+                </div>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <p class="footer-title">AI-Enabled Lost &amp; Found System</p>
+          <p class="muted footer-desc">
+            Adaptive retrieval, proactive validation, device risk analytics, and real-time security monitoring for improved recovery and loss prevention.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#results-discussion">Results</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#presentations">Presentations</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-heading">Project modules</p>
+          <ul class="footer-links">
+            <li><a href="#project-modules">Multimodal Item Retrieval</a></li>
+            <li><a href="#project-modules">Validation &amp; Fraud Detection</a></li>
+            <li><a href="#project-modules">Risk Prediction</a></li>
+            <li><a href="#project-modules">Suspicious Behavior Detection</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p class="muted">© <span id="year"></span> AI-Enabled Lost &amp; Found System. All rights reserved.</p>
+        <a class="muted" href="#home">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

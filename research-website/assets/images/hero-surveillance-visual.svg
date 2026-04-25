@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="840" viewBox="0 0 1120 840" role="img" aria-label="Surveillance visual placeholder with bounding boxes, alert overlay, and tracking IDs">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1120" height="840" rx="34" fill="url(#bg)"/>
+
+  <!-- Frame -->
+  <g filter="url(#sh)">
+    <rect x="90" y="120" width="940" height="560" rx="28" fill="rgba(7,15,31,0.58)" stroke="rgba(255,255,255,0.18)"/>
+    <rect x="120" y="150" width="880" height="500" rx="20" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+
+    <!-- HUD top bar -->
+    <rect x="120" y="150" width="880" height="54" rx="20" fill="rgba(255,255,255,0.05)"/>
+    <circle cx="160" cy="178" r="6" fill="#22d3ee" opacity="0.9"/>
+    <text x="178" y="184" font-family="system-ui,Segoe UI,Arial" font-size="14" fill="rgba(255,255,255,0.75)" font-weight="800">LIVE</text>
+    <text x="270" y="184" font-family="system-ui,Segoe UI,Arial" font-size="13" fill="rgba(255,255,255,0.50)">Camera: Concourse-A / 07</text>
+    <text x="830" y="184" font-family="system-ui,Segoe UI,Arial" font-size="13" fill="rgba(255,255,255,0.50)">FPS: 24 · Latency: 95ms</text>
+
+    <!-- Person box -->
+    <rect x="690" y="270" width="170" height="280" rx="18" fill="rgba(59,130,246,0.10)" stroke="rgba(59,130,246,0.75)" stroke-width="3"/>
+    <rect x="690" y="245" width="158" height="22" rx="10" fill="rgba(59,130,246,0.28)"/>
+    <text x="705" y="261" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="rgba(255,255,255,0.88)" font-weight="900">PERSON · ID 12</text>
+
+    <!-- Bag box (unattended) -->
+    <rect x="520" y="470" width="180" height="130" rx="18" fill="rgba(34,211,238,0.10)" stroke="rgba(34,211,238,0.85)" stroke-width="3"/>
+    <rect x="520" y="445" width="200" height="22" rx="10" fill="rgba(34,211,238,0.28)"/>
+    <text x="535" y="461" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="rgba(255,255,255,0.92)" font-weight="900">BAG · ID 05</text>
+
+    <!-- Tracking ID trail -->
+    <path d="M775 560 C 760 590, 720 605, 660 610" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round"/>
+    <text x="660" y="635" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="rgba(255,255,255,0.45)">track history</text>
+
+    <!-- Alert overlay card -->
+    <rect x="150" y="520" width="330" height="110" rx="18" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)"/>
+    <text x="176" y="555" font-family="system-ui,Segoe UI,Arial" font-size="14" fill="rgba(255,255,255,0.88)" font-weight="900">ALERT</text>
+    <text x="230" y="555" font-family="system-ui,Segoe UI,Arial" font-size="13" fill="rgba(255,255,255,0.60)">BAG_UNATTENDED</text>
+    <text x="176" y="582" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="rgba(255,255,255,0.52)">Evidence: item ID 05 · last owner ID 12</text>
+    <text x="176" y="604" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="rgba(255,255,255,0.52)">Time: 00:12:40.120 · Zone: drop-off</text>
+    <rect x="176" y="616" width="170" height="10" rx="6" fill="url(#accent)" opacity="0.85"/>
+  </g>
+
+  <text x="90" y="740" font-family="system-ui,Segoe UI,Arial" font-size="18" fill="rgba(255,255,255,0.68)">
+    Placeholder visual  replace with a real surveillance frame + bounding boxes + alert overlay + tracking IDs
+  </text>
+</svg>
+
