@@ -132,10 +132,15 @@ html[data-theme="light"] .site-header{
   min-width: 220px;
 }
 .brand-mark{
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   border-radius: 10px;
-  background: var(--panel);
   border: 1px solid var(--border);
+  background: var(--panel);
   box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
 }
 .brand-text{ display: grid; line-height: 1.05; }
 .brand-title{ font-weight: 750; letter-spacing: 0.2px; }
