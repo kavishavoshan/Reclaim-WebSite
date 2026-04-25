@@ -1,6 +1,6 @@
 # Research Website (Static)
 
-This folder contains a lightweight, static research project website for an **AI-powered Lost & Found** system.
+This repository contains a lightweight, static research project website for an **AI-powered Lost & Found** system. The site files live at the **repository root** so **GitHub Pages** can serve `index.html` at `https://<user>.github.io/<repo>/`.
 
 ## Requirements met
 
@@ -15,8 +15,8 @@ This folder contains a lightweight, static research project website for an **AI-
 ## Folder structure
 
 ```
-research-website/
   index.html
+  .nojekyll
   README.md
   assets/
     css/
@@ -24,17 +24,14 @@ research-website/
     js/
       main.js
     images/
-      logo.svg
-      hero-illustration.svg
+      ...
     documents/
-      .gitkeep
     slides/
-      .gitkeep
 ```
 
 ## How to use
 
-- Open `index.html` directly in a browser, or host the `research-website/` folder on any static host.
+- Open `index.html` directly in a browser, or host the repository root on any static host (e.g. GitHub Pages from the `main` branch, **/ (root)**).
 - Customize content directly in `index.html`.
 - Styling is in `assets/css/style.css`.
 - Interactions (theme toggle, mobile nav, active section highlighting, accordions) are in `assets/js/main.js`.
