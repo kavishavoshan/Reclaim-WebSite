@@ -31,8 +31,17 @@ function getPreferredTheme() {
   return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
+function syncThemeToggleLabel() {
+  const btn = $("#themeToggle");
+  if (!btn) return;
+  const t = document.documentElement.getAttribute("data-theme") || "light";
+  btn.setAttribute("aria-label", t === "dark" ? "Switch to light theme" : "Switch to dark theme");
+  btn.setAttribute("title", t === "dark" ? "Light theme" : "Dark theme");
+}
+
 function initThemeToggle() {
   setTheme(getPreferredTheme());
+  syncThemeToggleLabel();
 
   const btn = $("#themeToggle");
   if (!btn) return;
@@ -40,6 +49,7 @@ function initThemeToggle() {
   btn.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme") || "light";
     setTheme(current === "dark" ? "light" : "dark");
+    syncThemeToggleLabel();
   });
 }
 
@@ -153,15 +163,30 @@ function initMobileNav() {
   const linksWrap = $("#nav-links");
   if (!toggle || !linksWrap) return;
 
-  const close = () => {
-    linksWrap.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
+  const backdrop = document.createElement("div");
+  backdrop.className = "nav-backdrop";
+  backdrop.setAttribute("hidden", "");
+  backdrop.setAttribute("aria-hidden", "true");
+  document.body.appendChild(backdrop);
+
+  const setOpen = (open) => {
+    linksWrap.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-open", open);
+    if (open) {
+      backdrop.removeAttribute("hidden");
+    } else {
+      backdrop.setAttribute("hidden", "");
+    }
   };
 
+  const close = () => setOpen(false);
+
   toggle.addEventListener("click", () => {
-    const open = linksWrap.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    setOpen(!linksWrap.classList.contains("open"));
   });
+
+  backdrop.addEventListener("click", () => close());
 
   linksWrap.addEventListener("click", (e) => {
     const t = e.target;
@@ -178,7 +203,6 @@ function initMobileNav() {
     if (e.key === "Escape") close();
   });
 
-  // Close menu when leaving mobile breakpoint.
   window.addEventListener(
     "resize",
     () => {
@@ -186,6 +210,18 @@ function initMobileNav() {
     },
     { passive: true }
   );
+}
+
+function initHeaderScroll() {
+  const header = $("#site-header") || $(".site-header");
+  if (!header) return;
+
+  const onScroll = () => {
+    header.classList.toggle("header--scrolled", window.scrollY > 6);
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 }
 
 function initContactFormValidation() {
@@ -204,8 +240,7 @@ function initContactFormValidation() {
       box = document.createElement("div");
       box.setAttribute("data-form-status", "true");
       box.setAttribute("role", "status");
-      box.style.marginTop = "0.75rem";
-      box.style.color = "var(--muted)";
+      box.className = "form-status";
       form.appendChild(box);
     }
     return box;
@@ -215,12 +250,16 @@ function initContactFormValidation() {
     if (!el) return;
     el.setAttribute("aria-invalid", "true");
     el.dataset.error = msg;
+    const errP = document.getElementById(`${el.id}-error`);
+    if (errP) errP.textContent = msg;
   };
 
   const clearError = (el) => {
     if (!el) return;
     el.removeAttribute("aria-invalid");
     delete el.dataset.error;
+    const errP = document.getElementById(`${el.id}-error`);
+    if (errP) errP.textContent = "";
   };
 
   const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(String(v || "").trim());
@@ -284,11 +323,13 @@ function initContactFormValidation() {
     const t = e.target;
     if (t && t.matches(".form-control")) clearError(t);
     status.textContent = "";
+    status.classList.remove("form-status--success");
   });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     status.textContent = "";
+    status.classList.remove("form-status--success");
 
     if (!validate()) {
       const msg = showFirstError();
@@ -297,42 +338,37 @@ function initContactFormValidation() {
     }
 
     if (submitBtn) submitBtn.disabled = true;
-    status.textContent = "Success — your message was submitted (demo mode). We will contact you via email.";
+    status.classList.add("form-status--success");
+    status.textContent = "Success — your message was recorded (demo mode). We will contact you via email.";
 
-    // Reset after a short delay to simulate submission success.
     window.setTimeout(() => {
       form.reset();
       if (submitBtn) submitBtn.disabled = false;
       status.textContent = "";
-    }, 1400);
+      status.classList.remove("form-status--success");
+    }, 2200);
   });
 }
 
 function initBackToTop() {
   const btn = document.createElement("button");
   btn.type = "button";
-  btn.className = "btn btn-ghost";
+  btn.className = "btn btn-ghost back-to-top";
   btn.textContent = "Back to top";
   btn.setAttribute("aria-label", "Back to top");
-  btn.style.position = "fixed";
-  btn.style.right = "16px";
-  btn.style.bottom = "16px";
-  btn.style.zIndex = "120";
-  btn.style.display = "none";
-  btn.style.boxShadow = "var(--shadow-soft)";
-  btn.style.background = "color-mix(in oklab, var(--bg) 70%, transparent)";
-  btn.style.backdropFilter = "blur(10px)";
 
   btn.addEventListener("click", () => {
     const top = document.getElementById("home") || document.body;
     top.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
   });
 
+  btn.setAttribute("hidden", "");
   document.body.appendChild(btn);
 
   const onScroll = () => {
     const show = window.scrollY > 520;
-    btn.style.display = show ? "inline-flex" : "none";
+    if (show) btn.removeAttribute("hidden");
+    else btn.setAttribute("hidden", "");
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -382,6 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initActiveNav();
   initMobileNav();
+  initHeaderScroll();
   initContactFormValidation();
   initBackToTop();
   initRevealOnScroll();
