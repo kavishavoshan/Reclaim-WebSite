@@ -14,7 +14,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" role="banner">
+    <header class="site-header" id="site-header" role="banner">
       <div class="container header-inner">
         <a class="brand" href="#home" aria-label="Home">
           <img
@@ -323,7 +323,7 @@
               <div
                 class="arch-pipeline"
                 role="region"
-                aria-label="Layered system architecture. CSS diagram; add PNGs under assets/images/ for detailed figures below."
+                aria-label="Layered system architecture. CSS diagram; optional PNG or JPEG figures under assets/images/ below."
               >
                 <div class="arch-pipeline-ingress">
                   <p class="arch-pipeline-kicker">Inputs</p>
@@ -392,23 +392,23 @@
               <div class="arch-optional-figures" aria-label="Optional architecture diagram images">
                 <h4 class="doc-h3 arch-optional-figures-h">Optional architecture figures</h4>
                 <p class="muted arch-optional-lead">
-                  The CSS diagram above summarizes the end-to-end flow. For the final report, you can add high-resolution diagrams by placing PNG files in
-                  <code>assets/images/</code> (same filenames below). If a file is missing, a placeholder is shown until you add the image.
+                  The CSS diagram above summarizes the end-to-end flow. For the final report, you can add high-resolution diagrams by placing PNG or JPEG
+                  files in <code>assets/images/</code> (same filenames below). If a file is missing, a placeholder is shown until you add the image.
                 </p>
                 <div class="arch-optional-grid">
                   <figure class="arch-optional-figure">
                     <div class="arch-optional-frame">
                       <img
                         class="arch-optional-img"
-                        src="assets/images/system-architecture.png"
+                        src="assets/images/Overall-Architecture-Diagram.jpeg"
                         width="800"
                         height="450"
-                        alt="End-to-end system architecture diagram"
+                        alt="End-to-end system architecture diagram: users, multimodal validation, UACR retrieval, CCTV suspicious behavior detection, IVR, and shared data stores"
                         loading="lazy"
                         decoding="async"
                       />
                       <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/system-architecture.png</code></p>
+                        <p class="muted small">Add <code>assets/images/Overall-Architecture-Diagram.jpeg</code></p>
                       </div>
                     </div>
                     <figcaption class="muted small">System overview</figcaption>
@@ -1343,27 +1343,62 @@
 
             <article class="card reveal">
               <h3 class="doc-h3">Contact Form</h3>
-              <form action="#" method="post">
-                <div class="kv">
-                  <div>
-                    <label for="name"><strong>Name</strong></label>
-                    <div><input id="name" class="form-control" name="name" type="text" autocomplete="name" required /></div>
+              <form class="contact-form" action="#" method="post" novalidate>
+                <div class="form-stack">
+                  <div class="form-field">
+                    <label class="form-label" for="name">Name</label>
+                    <input
+                      id="name"
+                      class="form-control"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      aria-describedby="name-error"
+                    />
+                    <p id="name-error" class="form-field-error" role="alert" aria-live="polite"></p>
                   </div>
-                  <div>
-                    <label for="email"><strong>Email</strong></label>
-                    <div><input id="email" class="form-control" name="email" type="email" autocomplete="email" required /></div>
+                  <div class="form-field">
+                    <label class="form-label" for="email">Email</label>
+                    <input
+                      id="email"
+                      class="form-control"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                      aria-describedby="email-error"
+                    />
+                    <p id="email-error" class="form-field-error" role="alert" aria-live="polite"></p>
                   </div>
-                  <div>
-                    <label for="subject"><strong>Subject</strong></label>
-                    <div><input id="subject" class="form-control" name="subject" type="text" autocomplete="off" required /></div>
+                  <div class="form-field">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input
+                      id="subject"
+                      class="form-control"
+                      name="subject"
+                      type="text"
+                      autocomplete="off"
+                      required
+                      aria-describedby="subject-error"
+                    />
+                    <p id="subject-error" class="form-field-error" role="alert" aria-live="polite"></p>
                   </div>
-                  <div>
-                    <label for="message"><strong>Message</strong></label>
-                    <div><textarea id="message" class="form-control" name="message" rows="5" required></textarea></div>
+                  <div class="form-field">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea
+                      id="message"
+                      class="form-control"
+                      name="message"
+                      rows="5"
+                      required
+                      aria-describedby="message-error"
+                    ></textarea>
+                    <p id="message-error" class="form-field-error" role="alert" aria-live="polite"></p>
                   </div>
-                  <div>
+                  <div class="form-actions">
                     <button class="btn btn-primary" type="submit">Send Message</button>
-                    <p class="muted form-help">Static website: this form shows a success message after validation (no backend submission).</p>
+                    <p class="muted form-help">This is a static demo: validation runs in the browser only (no server).</p>
                   </div>
                 </div>
               </form>
