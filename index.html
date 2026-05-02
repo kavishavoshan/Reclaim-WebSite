@@ -42,7 +42,6 @@
             <a href="#research" title="Research">Research</a>
             <a href="#project-modules" title="Project Modules">Project Modules</a>
             <a href="#results-discussion" title="Results and Discussion">Results</a>
-            <a href="#milestones" title="Milestones">Milestones</a>
             <a href="#documents" title="Documents">Documents</a>
             <a href="#presentations" title="Presentations">Presentations</a>
             <a href="#team" title="Team">Team</a>
@@ -62,14 +61,18 @@
     <main id="main" tabindex="-1">
       <!-- 1. Home -->
       <section id="home" class="hero doc-hero" aria-label="Home">
-        <div class="container hero-inner">
-          <div class="hero-copy reveal">
+        <div class="container hero-shell">
+          <header class="hero-head reveal">
             <p class="eyebrow">Research Project 2026</p>
             <h1 class="hero-title">AI-Enabled Lost and Found System with Adaptive Retrieval and Intelligent Security Monitoring</h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle hero-subtitle--wide">
               A unified AI-powered lost and found platform that improves item recovery through uncertainty-aware retrieval, proactive multimodal validation,
               real-time suspicious behavior detection, and predictive device risk analytics.
             </p>
+          </header>
+
+          <div class="hero-inner">
+          <div class="hero-copy reveal">
             <p class="hero-lede">
               The proposed modular framework integrates adaptive retrieval, proactive validation, real-time monitoring, and predictive analytics to move
               beyond reactive item matching toward <strong>proactive loss prevention</strong> and <strong>intelligent security monitoring</strong> in
@@ -101,7 +104,36 @@
           </div>
 
           <div class="hero-visual reveal reveal-delay-1" aria-hidden="true">
-            <img src="assets/images/hero-lost-found-visual.svg" width="560" height="420" alt="" />
+            <div class="hero-visual-stack">
+              <div class="hero-visual-duo">
+                <img
+                  class="hero-visual-missing"
+                  src="assets/images/Missing.png"
+                  width="640"
+                  height="400"
+                  alt=""
+                  decoding="async"
+                />
+                <img
+                  class="hero-visual-mascot"
+                  src="assets/images/Robot.png"
+                  width="480"
+                  height="320"
+                  alt=""
+                  decoding="async"
+                />
+              </div>
+              <img
+                class="hero-visual-shot"
+                src="assets/images/WebStiteHomePage.png"
+                width="1280"
+                height="720"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -168,11 +200,18 @@
             </div>
 
             <div class="doc-block reveal">
-              <h3 class="doc-h3">Illustration / screenshot placeholder</h3>
-              <p class="muted">Replace the placeholder below with a UI screenshot or a system overview figure.</p>
+              <h3 class="doc-h3">Platform UI</h3>
+              <p class="muted">Mission selection screen from the Reclaim web app (lost vs found reporting).</p>
               <figure class="figure-placeholder" style="margin: 0.85rem 0 0;">
-                <img src="assets/images/placeholder-screenshot-dashboard.svg" width="960" height="420" alt="Placeholder: project UI or illustration" />
-                <figcaption class="muted">Placeholder — add your platform UI screenshot, architecture overview, or demo results.</figcaption>
+                <img
+                  src="assets/images/WebStiteHomePage.png"
+                  width="1280"
+                  height="720"
+                  alt="Reclaim web app showing Select Your Mission with I Lost It and I Found It options"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="muted">Reclaim — "Select Your Mission" home screen.</figcaption>
               </figure>
             </div>
           </div>
@@ -213,19 +252,39 @@
               </ol>
 
               <div style="margin-top: 1rem;">
-                <a class="btn btn-primary" href="#" rel="noopener">Watch Demo Video</a>
+                <a
+                  class="btn btn-primary"
+                  href="https://youtu.be/fLmv90xrMNA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Watch Demo Video</a>
               </div>
             </div>
 
             <div class="doc-block reveal">
-              <h3 class="doc-h3">Demo video (placeholder)</h3>
-              <p class="muted">Replace this card with an embedded video or link to your recorded demo.</p>
-              <a class="video-card" href="#" aria-label="Watch demo video">
-                <span class="video-card-inner" aria-hidden="true">
+              <h3 class="doc-h3">Demo video</h3>
+              <p class="muted">Opens the project demo on YouTube in a new tab.</p>
+              <a
+                class="video-card"
+                href="https://youtu.be/fLmv90xrMNA"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Watch demo video on YouTube (opens in a new tab)"
+              >
+                <span class="video-card-inner">
+                  <img
+                    class="video-card-thumb"
+                    src="https://img.youtube.com/vi/fLmv90xrMNA/maxresdefault.jpg"
+                    alt=""
+                    width="1280"
+                    height="720"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span class="video-play" aria-hidden="true"></span>
                   <span class="video-meta">
                     <span class="video-title">Lost &amp; Found Platform Demo</span>
-                    <span class="video-subtitle">Matching · Validation · Risk · Suspicious behavior alerts</span>
+                    <span class="video-subtitle">YouTube · Matching · Validation · Risk · Alerts</span>
                   </span>
                 </span>
               </a>
@@ -246,7 +305,7 @@
             </p>
           </header>
 
-          <div class="grid grid-2">
+          <div class="grid grid-2 research-overview-grid">
             <article class="card card-story reveal">
               <h3 class="doc-h3">1) Research Gap &amp; Problem</h3>
               <p class="muted">
@@ -320,169 +379,21 @@
                 matches, feedback, and notifications.
               </p>
 
-              <div
-                class="arch-pipeline"
-                role="region"
-                aria-label="Layered system architecture. CSS diagram; optional PNG or JPEG figures under assets/images/ below."
-              >
-                <div class="arch-pipeline-ingress">
-                  <p class="arch-pipeline-kicker">Inputs</p>
-                  <p class="arch-pipeline-ingress-title">User Inputs / CCTV Streams / Device Behavior Data</p>
-                </div>
-
-                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
-
-                <section class="arch-pipeline-block" aria-labelledby="arch-layer-data">
-                  <h4 class="arch-pipeline-h" id="arch-layer-data">Data Collection Layer</h4>
-                  <ul class="arch-pipeline-list">
-                    <li>Lost item reports</li>
-                    <li>Found item reports</li>
-                    <li>Images</li>
-                    <li>Text descriptions</li>
-                    <li>Voice inputs</li>
-                    <li>CCTV/video streams</li>
-                    <li>Device behavior logs</li>
-                  </ul>
-                </section>
-
-                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
-
-                <section class="arch-pipeline-block" aria-labelledby="arch-layer-ai">
-                  <h4 class="arch-pipeline-h" id="arch-layer-ai">AI Processing Layer</h4>
-                  <ul class="arch-pipeline-list arch-pipeline-list--dense">
-                    <li>MobileNetV3 classification</li>
-                    <li>MC Dropout uncertainty estimation</li>
-                    <li>FAISS retrieval</li>
-                    <li>CLIP semantic re-ranking</li>
-                    <li>Multimodal validation</li>
-                    <li>YOLOv11 object detection</li>
-                    <li>BoT-SORT tracking</li>
-                    <li>Isolation Forest anomaly detection</li>
-                    <li>XGBoost risk prediction</li>
-                  </ul>
-                </section>
-
-                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
-
-                <section class="arch-pipeline-block" aria-labelledby="arch-layer-decision">
-                  <h4 class="arch-pipeline-h" id="arch-layer-decision">Decision Intelligence Layer</h4>
-                  <ul class="arch-pipeline-list">
-                    <li>Retrieval confidence</li>
-                    <li>Validation confidence</li>
-                    <li>Cross-modal discrepancy detection</li>
-                    <li>Suspicious behavior alerting</li>
-                    <li>Lost item risk scoring</li>
-                  </ul>
-                </section>
-
-                <div class="arch-arrow arch-arrow--in-pipeline" aria-hidden="true"></div>
-
-                <section class="arch-pipeline-block" aria-labelledby="arch-layer-out">
-                  <h4 class="arch-pipeline-h" id="arch-layer-out">Output Layer</h4>
-                  <ul class="arch-pipeline-list">
-                    <li>Ranked item matches</li>
-                    <li>Validation feedback</li>
-                    <li>Security alerts</li>
-                    <li>Risk scores</li>
-                    <li>Admin dashboard notifications</li>
-                  </ul>
-                </section>
-              </div>
-
-              <div class="arch-optional-figures" aria-label="Optional architecture diagram images">
-                <h4 class="doc-h3 arch-optional-figures-h">Optional architecture figures</h4>
-                <p class="muted arch-optional-lead">
-                  The CSS diagram above summarizes the end-to-end flow. For the final report, you can add high-resolution diagrams by placing PNG or JPEG
-                  files in <code>assets/images/</code> (same filenames below). If a file is missing, a placeholder is shown until you add the image.
-                </p>
-                <div class="arch-optional-grid">
-                  <figure class="arch-optional-figure">
-                    <div class="arch-optional-frame">
-                      <img
-                        class="arch-optional-img"
-                        src="assets/images/Overall-Architecture-Diagram.jpeg"
-                        width="800"
-                        height="450"
-                        alt="End-to-end system architecture diagram: users, multimodal validation, UACR retrieval, CCTV suspicious behavior detection, IVR, and shared data stores"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/Overall-Architecture-Diagram.jpeg</code></p>
-                      </div>
-                    </div>
-                    <figcaption class="muted small">System overview</figcaption>
-                  </figure>
-                  <figure class="arch-optional-figure">
-                    <div class="arch-optional-frame">
-                      <img
-                        class="arch-optional-img"
-                        src="assets/images/uacr-pipeline.png"
-                        width="800"
-                        height="450"
-                        alt="UACR retrieval and matching pipeline"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/uacr-pipeline.png</code></p>
-                      </div>
-                    </div>
-                    <figcaption class="muted small">UACR pipeline</figcaption>
-                  </figure>
-                  <figure class="arch-optional-figure">
-                    <div class="arch-optional-frame">
-                      <img
-                        class="arch-optional-img"
-                        src="assets/images/validation-pipeline.png"
-                        width="800"
-                        height="450"
-                        alt="Multimodal validation pipeline"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/validation-pipeline.png</code></p>
-                      </div>
-                    </div>
-                    <figcaption class="muted small">Validation pipeline</figcaption>
-                  </figure>
-                  <figure class="arch-optional-figure">
-                    <div class="arch-optional-frame">
-                      <img
-                        class="arch-optional-img"
-                        src="assets/images/suspicious-behavior-flow.png"
-                        width="800"
-                        height="450"
-                        alt="Suspicious behavior detection and alerting flow"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/suspicious-behavior-flow.png</code></p>
-                      </div>
-                    </div>
-                    <figcaption class="muted small">Suspicious behavior flow</figcaption>
-                  </figure>
-                  <figure class="arch-optional-figure">
-                    <div class="arch-optional-frame">
-                      <img
-                        class="arch-optional-img"
-                        src="assets/images/device-risk-analytics.png"
-                        width="800"
-                        height="450"
-                        alt="Device behavior anomaly and risk analytics"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div class="arch-optional-fallback" hidden>
-                        <p class="muted small">Add <code>assets/images/device-risk-analytics.png</code></p>
-                      </div>
-                    </div>
-                    <figcaption class="muted small">Device risk analytics</figcaption>
-                  </figure>
-                </div>
-              </div>
+              <figure class="system-arch-figure" role="region" aria-label="System architecture diagram">
+                <img
+                  class="system-arch-img"
+                  src="assets/images/Overall-Architecture-Diagram.jpeg"
+                  width="1600"
+                  height="900"
+                  alt="System architecture: users and multimodal inputs to validation and UACR retrieval, CCTV to suspicious behavior detection, shared item database and logs, results UI and admin console"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="muted small">
+                  Overall system architecture — multimodal validation, uncertainty-aware retrieval (UACR), suspicious behavior detection, shared resources,
+                  and access interfaces.
+                </figcaption>
+              </figure>
 
               <p class="muted" style="margin-top: 0.85rem;">
                 For module-level implementation details, see <a href="#project-modules">Project Modules</a>.
@@ -777,7 +688,7 @@
         </div>
       </section>
 
-      <!-- Results and Discussion (between Project Modules and Milestones) -->
+      <!-- Results and Discussion (between Project Modules and Achievements) -->
       <section id="results-discussion" class="section section-alt doc-section" aria-label="Results and Discussion">
         <div class="container">
           <header class="doc-section-header reveal">
@@ -989,85 +900,10 @@
         </div>
       </section>
 
-      <!-- 6. Milestones -->
-      <section id="milestones" class="section doc-section">
-        <div class="container">
-          <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 06</p>
-            <h2 class="doc-h2">Milestones</h2>
-            <p class="doc-lead">
-              A professional research journey timeline. Update the <strong>Date</strong> and <strong>Weight</strong> fields with your official schedule and marks.
-            </p>
-          </header>
-
-          <div class="timeline">
-            <article class="timeline-item card reveal">
-              <div class="timeline-head">
-                <h3 class="doc-h3">1. Project Proposal</h3>
-                <span class="status-badge status-completed">Completed</span>
-              </div>
-              <dl class="timeline-meta">
-                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
-                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
-              </dl>
-              <p class="muted">Initial research proposal including problem statement, objectives, methodology, and project plan.</p>
-            </article>
-
-            <article class="timeline-item card reveal">
-              <div class="timeline-head">
-                <h3 class="doc-h3">2. Progress Presentation 1</h3>
-                <span class="status-badge status-completed">Completed</span>
-              </div>
-              <dl class="timeline-meta">
-                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
-                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
-              </dl>
-              <p class="muted">First progress evaluation covering initial implementation and component-level development.</p>
-            </article>
-
-            <article class="timeline-item card reveal">
-              <div class="timeline-head">
-                <h3 class="doc-h3">3. Progress Presentation 2</h3>
-                <span class="status-badge status-completed">Completed</span>
-              </div>
-              <dl class="timeline-meta">
-                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
-                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
-              </dl>
-              <p class="muted">Second progress evaluation covering system integration, model improvements, and testing.</p>
-            </article>
-
-            <article class="timeline-item card reveal">
-              <div class="timeline-head">
-                <h3 class="doc-h3">4. Final Report</h3>
-                <span class="status-badge status-pending">Pending / Completed</span>
-              </div>
-              <dl class="timeline-meta">
-                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
-                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
-              </dl>
-              <p class="muted">Complete research documentation including methodology, implementation, results, and conclusion.</p>
-            </article>
-
-            <article class="timeline-item card reveal">
-              <div class="timeline-head">
-                <h3 class="doc-h3">5. Final Viva</h3>
-                <span class="status-badge status-pending">Pending</span>
-              </div>
-              <dl class="timeline-meta">
-                <div><dt>Date</dt><dd><span class="muted">Add date</span></dd></div>
-                <div><dt>Weight</dt><dd><span class="muted">Add marks</span></dd></div>
-              </dl>
-              <p class="muted">Final oral examination and project demonstration.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="achievements" class="section section-alt doc-section" aria-label="Research Achievements">
         <div class="container">
           <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 07</p>
+            <p class="doc-kicker">Section 06</p>
             <h2 class="doc-h2">Research Achievements</h2>
             <p class="doc-lead">Highlights of technical contributions and outcomes from the AI-enabled lost and found framework.</p>
           </header>
@@ -1116,7 +952,7 @@
       <section id="documents" class="section doc-section">
         <div class="container">
           <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 08</p>
+            <p class="doc-kicker">Section 07</p>
             <h2 class="doc-h2">Research Documentation</h2>
             <p class="doc-lead">
               Access the project documents, reports, presentations, and research materials related to the development and evaluation of the AI-powered
@@ -1131,38 +967,74 @@
                 Final research paper describing the AI-enabled lost and found system, adaptive retrieval, multimodal validation, suspicious behavior
                 detection, and predictive risk analytics.
               </p>
-              <a class="btn btn-secondary" href="assets/documents/research-paper.pdf" target="_blank" rel="noopener">View Paper</a>
-              <p class="muted small">Link: <code>assets/documents/research-paper.pdf</code></p>
+              <a
+                class="btn btn-secondary"
+                href="https://drive.google.com/uc?export=download&amp;id=1tQKrmd0xSqIDRzP3KH6kZp6Jo6Ffm-WY"
+                rel="noopener noreferrer"
+              >Download Paper</a>
+              <p class="muted small">
+                Direct download from Google Drive —
+                <a
+                  href="https://drive.google.com/file/d/1tQKrmd0xSqIDRzP3KH6kZp6Jo6Ffm-WY/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >open in Drive</a>
+                if the file does not start downloading.
+              </p>
             </article>
             <article class="card reveal">
               <h3 class="doc-h3">Project Charter</h3>
               <p class="muted">Initial project scope, team details, and research direction.</p>
-              <a class="btn btn-secondary" href="assets/documents/project-charter.pdf" target="_blank" rel="noopener">View Document</a>
-              <p class="muted small">Link: <code>assets/documents/project-charter.pdf</code></p>
+              <a
+                class="btn btn-secondary"
+                href="https://drive.google.com/uc?export=download&amp;id=1_oK2E2Uc_Fj8Iodozp8yrbzLJSr1pkPs"
+                rel="noopener noreferrer"
+              >Download Charter</a>
+              <p class="muted small">
+                Direct download from Google Drive —
+                <a
+                  href="https://drive.google.com/file/d/1_oK2E2Uc_Fj8Iodozp8yrbzLJSr1pkPs/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >open in Drive</a>
+                if the file does not start downloading.
+              </p>
             </article>
             <article class="card reveal">
-              <h3 class="doc-h3">Proposal Document</h3>
-              <p class="muted">Research problem, objectives, literature review, and proposed methodology.</p>
-              <a class="btn btn-secondary" href="assets/documents/proposal-document.pdf" target="_blank" rel="noopener">View Document</a>
-              <p class="muted small">Link: <code>assets/documents/proposal-document.pdf</code></p>
+              <h3 class="doc-h3">Proposal Report</h3>
+              <p class="muted">Research proposal report: problem, objectives, literature review, and proposed methodology.</p>
+              <a
+                class="btn btn-secondary"
+                href="https://drive.google.com/uc?export=download&amp;id=11No6-5gqBH8l8pv_pdmbG-Kzz9aXE7GT"
+                rel="noopener noreferrer"
+              >Download Report</a>
+              <p class="muted small">
+                Direct download from Google Drive —
+                <a
+                  href="https://drive.google.com/file/d/11No6-5gqBH8l8pv_pdmbG-Kzz9aXE7GT/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >open in Drive</a>
+                if the file does not start downloading.
+              </p>
             </article>
             <article class="card reveal">
-              <h3 class="doc-h3">Checklist Documents</h3>
-              <p class="muted">Assessment checklist documents and progress evaluation materials.</p>
-              <a class="btn btn-secondary" href="assets/documents/checklist-documents.pdf" target="_blank" rel="noopener">View Document</a>
-              <p class="muted small">Link: <code>assets/documents/checklist-documents.pdf</code></p>
-            </article>
-            <article class="card reveal">
-              <h3 class="doc-h3">Final Report</h3>
-              <p class="muted">Complete final research report including implementation, testing, results, and conclusion.</p>
-              <a class="btn btn-secondary" href="assets/documents/final-report.pdf" target="_blank" rel="noopener">View Document</a>
-              <p class="muted small">Link: <code>assets/documents/final-report.pdf</code></p>
-            </article>
-            <article class="card reveal">
-              <h3 class="doc-h3">Log Books</h3>
-              <p class="muted">Individual research activity logs and development progress records.</p>
-              <a class="btn btn-secondary" href="assets/documents/log-books.pdf" target="_blank" rel="noopener">View Document</a>
-              <p class="muted small">Link: <code>assets/documents/log-books.pdf</code></p>
+              <h3 class="doc-h3">Checklist 1</h3>
+              <p class="muted">Assessment checklist and progress evaluation materials (checklist 1).</p>
+              <a
+                class="btn btn-secondary"
+                href="https://drive.google.com/uc?export=download&amp;id=14Ie4_4xyIGG1C7FnRAm7fWATYzBL6BEi"
+                rel="noopener noreferrer"
+              >Download</a>
+              <p class="muted small">
+                Direct download from Google Drive —
+                <a
+                  href="https://drive.google.com/file/d/14Ie4_4xyIGG1C7FnRAm7fWATYzBL6BEi/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >open in Drive</a>
+                if the file does not start downloading.
+              </p>
             </article>
           </div>
         </div>
@@ -1172,7 +1044,7 @@
       <section id="presentations" class="section section-alt doc-section">
         <div class="container">
           <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 09</p>
+            <p class="doc-kicker">Section 08</p>
             <h2 class="doc-h2">Presentation Slides</h2>
             <p class="doc-lead">View the presentation slides used during project evaluations and research progress assessments.</p>
           </header>
@@ -1181,26 +1053,59 @@
             <article class="card reveal">
               <h3 class="doc-h3">Proposal Presentation</h3>
               <p class="muted">Initial presentation covering the research problem, objectives, and proposed solution.</p>
-              <a class="btn btn-secondary" href="assets/slides/proposal-presentation.pdf" target="_blank" rel="noopener">View Slides</a>
-              <p class="muted small">Link: <code>assets/slides/proposal-presentation.pdf</code></p>
+              <a
+                class="btn btn-secondary"
+                href="https://docs.google.com/presentation/d/1z_3jY2pJYNmMgNXVRoPPS1_qii7o0GMl/preview"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Slides</a>
+              <p class="muted small">
+                Google Slides — preview opens for viewing.
+                <a
+                  href="https://docs.google.com/presentation/d/1z_3jY2pJYNmMgNXVRoPPS1_qii7o0GMl/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Open in editor</a>
+                if you have access.
+              </p>
             </article>
             <article class="card reveal">
               <h3 class="doc-h3">Progress Presentation 1</h3>
               <p class="muted">First progress presentation covering early implementation and component development.</p>
-              <a class="btn btn-secondary" href="assets/slides/progress-presentation-1.pdf" target="_blank" rel="noopener">View Slides</a>
-              <p class="muted small">Link: <code>assets/slides/progress-presentation-1.pdf</code></p>
+              <a
+                class="btn btn-secondary"
+                href="https://docs.google.com/presentation/d/1z_3jY2pJYNmMgNXVRoPPS1_qii7o0GMl/preview"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Slides</a>
+              <p class="muted small">
+                Google Slides — preview opens for viewing.
+                <a
+                  href="https://docs.google.com/presentation/d/1z_3jY2pJYNmMgNXVRoPPS1_qii7o0GMl/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Open in editor</a>
+                if you have access.
+              </p>
             </article>
             <article class="card reveal">
               <h3 class="doc-h3">Progress Presentation 2</h3>
               <p class="muted">Second progress presentation covering system integration, improvements, and testing.</p>
-              <a class="btn btn-secondary" href="assets/slides/progress-presentation-2.pdf" target="_blank" rel="noopener">View Slides</a>
-              <p class="muted small">Link: <code>assets/slides/progress-presentation-2.pdf</code></p>
-            </article>
-            <article class="card reveal">
-              <h3 class="doc-h3">Final Presentation</h3>
-              <p class="muted">Final presentation covering the complete system, research outcomes, and evaluation.</p>
-              <a class="btn btn-secondary" href="assets/slides/final-presentation.pdf" target="_blank" rel="noopener">View Slides</a>
-              <p class="muted small">Link: <code>assets/slides/final-presentation.pdf</code></p>
+              <a
+                class="btn btn-secondary"
+                href="https://docs.google.com/presentation/d/1S8TX7ttUMLVgKRDXfeIWqeEnRb3SurYz/preview"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Slides</a>
+              <p class="muted small">
+                Google Slides — preview opens for viewing.
+                <a
+                  href="https://docs.google.com/presentation/d/1S8TX7ttUMLVgKRDXfeIWqeEnRb3SurYz/edit?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Open in editor</a>
+                if you have access.
+              </p>
             </article>
           </div>
         </div>
@@ -1210,7 +1115,7 @@
       <section id="team" class="section doc-section">
         <div class="container">
           <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 10</p>
+            <p class="doc-kicker">Section 09</p>
             <h2 class="doc-h2">Meet Our Research Team</h2>
             <p class="doc-lead">
               A collaborative research project developed by undergraduate researchers with academic guidance from supervisors and co-supervisors.
@@ -1221,9 +1126,17 @@
           <div class="grid grid-3 people-grid">
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/Dinuka-madam.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Dr. Dinuka Wijendra"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
-                  <h4 class="doc-h3">Dinuka Wijendra</h4>
+                  <h4 class="doc-h3">Dr. Dinuka Wijendra</h4>
                   <p class="muted">Designation: Lecturer</p>
                 </div>
               </div>
@@ -1246,9 +1159,17 @@
 
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/Jenny-Madam.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Ms. Jenny Krishara"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
-                  <h4 class="doc-h3">Jenny Krishara</h4>
+                  <h4 class="doc-h3">Ms. Jenny Krishara</h4>
                   <p class="muted">Designation: Lecturer</p>
                 </div>
               </div>
@@ -1274,7 +1195,15 @@
           <div class="grid grid-2 people-grid">
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/minuk.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Minuk M. Weerakoon"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h4 class="doc-h3">Minuk M. Weerakoon</h4>
                   <p class="muted">
@@ -1290,7 +1219,15 @@
 
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/Kumesha.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Kumesha U. Wijesundara"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h4 class="doc-h3">Kumesha U. Wijesundara</h4>
                   <p class="muted">
@@ -1306,7 +1243,15 @@
 
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/Nethmi.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Nethmi N. Thambawita"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h4 class="doc-h3">Nethmi N. Thambawita</h4>
                   <p class="muted">
@@ -1322,7 +1267,15 @@
 
             <article class="card person-card reveal">
               <div class="person-head">
-                <img class="avatar" src="assets/images/avatar-placeholder.svg" width="72" height="72" alt="" />
+                <img
+                  class="avatar"
+                  src="assets/images/Voshan.png"
+                  width="72"
+                  height="72"
+                  alt="Portrait of Kavisha V. Wickramasinghe"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h4 class="doc-h3">Kavisha V. Wickramasinghe</h4>
                   <p class="muted">
@@ -1343,7 +1296,7 @@
       <section id="contact" class="section section-alt doc-section">
         <div class="container">
           <header class="doc-section-header reveal">
-            <p class="doc-kicker">Section 11</p>
+            <p class="doc-kicker">Section 10</p>
             <h2 class="doc-h2">Get In Touch</h2>
             <p class="doc-lead">Have questions about our research or interested in collaboration? Reach out to our research team.</p>
           </header>
@@ -1358,11 +1311,11 @@
                 </div>
                 <div>
                   <dt>Email</dt>
-                  <dd class="muted">Add project email</dd>
+                  <dd class="muted"><a href="mailto:reclaim703@gmail.com">reclaim703@gmail.com</a></dd>
                 </div>
                 <div>
                   <dt>Phone</dt>
-                  <dd class="muted">Add phone number</dd>
+                  <dd class="muted"><a href="tel:+94765997841">0765997841</a></dd>
                 </div>
               </dl>
 
@@ -1434,7 +1387,6 @@
                   </div>
                   <div class="form-actions">
                     <button class="btn btn-primary" type="submit">Send Message</button>
-                    <p class="muted form-help">This is a static demo: validation runs in the browser only (no server).</p>
                   </div>
                 </div>
               </form>

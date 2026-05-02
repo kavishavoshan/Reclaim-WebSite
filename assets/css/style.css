@@ -13,7 +13,7 @@
   --brand-2: #3b82f6; /* blue */
   --focus: #22d3ee;
   --radius: 16px;
-  --max: 1120px;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
   --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
   --surface: rgba(255,255,255,0.06);
   --surface-2: rgba(255,255,255,0.085);
@@ -43,10 +43,6 @@ body{
   font-family: var(--font);
   color: var(--text);
   background: var(--bg);
-  background:
-    radial-gradient(900px 520px at 12% 8%, color-mix(in oklab, var(--brand) 26%, transparent), transparent 60%),
-    radial-gradient(820px 520px at 86% 16%, color-mix(in oklab, var(--brand-2) 20%, transparent), transparent 60%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   line-height: 1.55;
   text-rendering: optimizeLegibility;
 }
@@ -70,8 +66,12 @@ code{
 }
 
 .container{
-  width: min(var(--max), calc(100% - 2rem));
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  box-sizing: border-box;
 }
 
 .sr-only{
@@ -121,10 +121,12 @@ html[data-theme="light"] .site-header{
   background: color-mix(in oklab, #ffffff 82%, transparent);
 }
 
-/* Make header full width (no max container) */
+/* Make header full width (no max container) — inset only; no page-gutter padding */
 .site-header .container{
   width: calc(100% - 2rem);
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .header-inner{
@@ -317,10 +319,7 @@ html[data-theme="light"] .site-header{
   padding-top: 3.75rem;
 }
 .doc-hero{
-  background:
-    radial-gradient(900px 520px at 12% 8%, rgba(34,211,238,0.22), transparent 60%),
-    radial-gradient(820px 520px at 86% 16%, rgba(37,99,235,0.20), transparent 60%),
-    linear-gradient(180deg, #070f1f 0%, #0a1630 100%);
+  background: var(--bg);
 }
 .doc-hero .hero-title{ color: rgba(255,255,255,0.95); }
 .doc-hero .hero-lede,
@@ -331,11 +330,53 @@ html[data-theme="light"] .site-header{
   background: rgba(255,255,255,0.06);
   border-color: rgba(255,255,255,0.16);
 }
+
+/* Light theme: hero uses same pale --bg as the rest of the page — use dark text for contrast */
+html[data-theme="light"] .doc-hero .hero-title{
+  color: rgba(8,16,32,0.94);
+}
+html[data-theme="light"] .doc-hero .hero-lede,
+html[data-theme="light"] .doc-hero .hero-subtitle,
+html[data-theme="light"] .doc-hero .muted{
+  color: rgba(8,16,32,0.72);
+}
+html[data-theme="light"] .doc-hero .eyebrow{
+  color: rgba(8,16,32,0.82);
+  background: rgba(6,12,26,0.06);
+  border-color: rgba(8,16,32,0.14);
+}
+
+.hero-shell{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero-head{
+  width: 100%;
+}
+.hero-head .eyebrow{
+  margin-bottom: 0;
+}
+.hero-head .hero-title{
+  margin-top: 0.75rem;
+  margin-bottom: 0.55rem;
+  max-width: none;
+  font-size: clamp(2.15rem, 5vw + 1rem, 4rem);
+  line-height: 1.06;
+  letter-spacing: -0.65px;
+}
+.hero-subtitle--wide{
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  font-size: clamp(1.06rem, 1.35vw + 0.88rem, 1.28rem);
+  line-height: 1.52;
+}
 .hero-inner{
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 .eyebrow{
   display: inline-flex;
@@ -441,11 +482,30 @@ html[data-theme="light"] .site-header{
   border-color: color-mix(in oklab, var(--brand) 35%, var(--border));
 }
 .video-card-inner{
-  min-height: 260px;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
   display: grid;
   place-items: center;
-  padding: 1.25rem;
+  padding: 0;
   position: relative;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--bg) 80%, var(--border));
+}
+.video-card-inner::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+.video-card-thumb{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 .video-play{
   width: 86px;
@@ -455,6 +515,7 @@ html[data-theme="light"] .site-header{
   border: 1px solid color-mix(in oklab, var(--brand) 45%, var(--border));
   box-shadow: 0 12px 24px rgba(0,0,0,0.24);
   position: relative;
+  z-index: 1;
 }
 .video-play::after{
   content: "";
@@ -477,6 +538,7 @@ html[data-theme="light"] .site-header{
   border: 1px solid rgba(255,255,255,0.14);
   background: color-mix(in oklab, var(--bg) 65%, transparent);
   backdrop-filter: blur(10px);
+  z-index: 1;
 }
 .video-title{
   display: block;
@@ -489,147 +551,6 @@ html[data-theme="light"] .site-header{
   color: var(--muted);
   font-size: 0.92rem;
 }
-
-/* Down arrows (shared by layered architecture pipeline) */
-.arch-arrow{
-  height: 18px;
-  position: relative;
-}
-.arch-arrow::before{
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 2px;
-  width: 2px;
-  height: 14px;
-  background: color-mix(in oklab, var(--brand) 40%, var(--border));
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-.arch-arrow::after{
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 12px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid color-mix(in oklab, var(--brand) 55%, var(--border));
-  transform: translateX(-50%);
-}
-
-/* Layered pipeline (System Architecture) — vertical CSS diagram */
-.arch-pipeline{
-  margin-top: 0.95rem;
-  padding: 0.9rem 1rem 1.05rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: color-mix(in oklab, var(--panel) 88%, transparent);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
-}
-.arch-pipeline-ingress{
-  padding: 0.9rem 1rem;
-  border-radius: 14px;
-  border: 1px solid color-mix(in oklab, var(--brand) 28%, var(--border));
-  background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 12%, transparent), color-mix(in oklab, var(--brand-2) 8%, transparent));
-  text-align: center;
-}
-.arch-pipeline-kicker{
-  margin: 0 0 0.35rem;
-  font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: color-mix(in oklab, var(--brand) 70%, var(--muted));
-}
-.arch-pipeline-ingress-title{
-  margin: 0;
-  font-size: 1.02rem;
-  font-weight: 950;
-  letter-spacing: -0.2px;
-  line-height: 1.25;
-  color: var(--text);
-}
-.arch-pipeline-block{
-  padding: 0.85rem 0.95rem 0.95rem;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: color-mix(in oklab, var(--bg) 65%, transparent);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset;
-}
-.arch-pipeline-h{
-  margin: 0 0 0.55rem;
-  font-size: 1.02rem;
-  font-weight: 950;
-  color: color-mix(in oklab, var(--text) 90%, var(--brand));
-  letter-spacing: -0.15px;
-}
-.arch-pipeline-list{
-  margin: 0;
-  padding-left: 1.15rem;
-  color: var(--muted);
-  display: grid;
-  gap: 0.3rem;
-  font-size: 0.94rem;
-}
-.arch-pipeline-list--dense{
-  grid-template-columns: 1fr;
-  gap: 0.25rem;
-}
-@media (min-width: 700px){
-  .arch-pipeline-list--dense{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-.arch-pipeline-list li::marker{ color: color-mix(in oklab, var(--brand) 65%, var(--muted)); }
-.arch-arrow--in-pipeline{ height: 18px; }
-.arch-optional-figures{ margin-top: 1.15rem; }
-.arch-optional-figures-h{ margin: 0 0 0.4rem; }
-.arch-optional-lead{ margin: 0 0 0.85rem; }
-.arch-optional-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.9rem;
-}
-@media (min-width: 700px){
-  .arch-optional-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-.arch-optional-figure{ margin: 0; }
-.arch-optional-figure .small{ margin: 0; }
-.arch-optional-frame{
-  position: relative;
-  min-height: 200px;
-  border-radius: calc(var(--radius) - 2px);
-  border: 1px dashed color-mix(in oklab, var(--brand) 32%, var(--border));
-  background: color-mix(in oklab, var(--panel) 75%, transparent);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-}
-.arch-optional-img{
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 360px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-.arch-optional-img[hidden]{
-  display: none;
-}
-.arch-optional-fallback{
-  padding: 1.25rem;
-  text-align: center;
-}
-.arch-optional-fallback p{ margin: 0; }
-.arch-optional-figure figcaption{ margin: 0.4rem 0 0; }
 
 /* Methodology (numbered cards inside Research section) */
 .method-cards{
@@ -681,6 +602,11 @@ html[data-theme="light"] .site-header{
 @media (min-width: 640px){
   .tech-groups--cards{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px){
+  .tech-groups--cards{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 .tech-group{
@@ -835,72 +761,6 @@ html[data-theme="light"] .site-header{
   margin-top: 0.75rem;
 }
 
-/* Milestones timeline */
-.timeline{
-  display: grid;
-  gap: 0.9rem;
-  position: relative;
-  padding-left: 0.9rem;
-}
-.timeline::before{
-  content: "";
-  position: absolute;
-  left: 0.35rem;
-  top: 0.4rem;
-  bottom: 0.4rem;
-  width: 2px;
-  background: color-mix(in oklab, var(--brand) 35%, var(--border));
-  border-radius: 2px;
-}
-.timeline-item{
-  position: relative;
-  padding: 1.05rem;
-}
-.timeline-item::before{
-  content: "";
-  position: absolute;
-  left: -0.18rem;
-  top: 1.25rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 10px 18px rgba(0,0,0,0.18);
-}
-.timeline-head{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-.status-badge{
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: color-mix(in oklab, var(--panel) 90%, transparent);
-  font-weight: 900;
-  font-size: 0.78rem;
-  white-space: nowrap;
-}
-.status-completed{
-  border-color: color-mix(in oklab, var(--brand) 40%, var(--border));
-  color: color-mix(in oklab, var(--text) 88%, var(--brand));
-}
-.status-pending{
-  border-color: color-mix(in oklab, var(--brand-2) 35%, var(--border));
-  color: color-mix(in oklab, var(--text) 88%, var(--brand-2));
-}
-.timeline-meta{
-  margin: 0.65rem 0 0.75rem;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
-}
-.timeline-meta dt{ font-weight: 950; }
-.timeline-meta dd{ margin: 0.15rem 0 0; }
-
 /* Achievements */
 .achievements-grid{
   margin-top: 0.25rem;
@@ -944,6 +804,7 @@ html[data-theme="light"] .site-header{
   background: var(--panel);
   box-shadow: var(--shadow-soft);
   flex: 0 0 auto;
+  object-fit: cover;
 }
 .person-meta{
   margin: 0.65rem 0 0;
@@ -952,36 +813,60 @@ html[data-theme="light"] .site-header{
 }
 .person-meta dt{ font-weight: 950; }
 .person-meta dd{ margin: 0.15rem 0 0; color: var(--muted); }
-.hero-visual img{
+.hero-visual-stack{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.15rem;
+}
+.hero-visual-duo{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+.hero-visual-missing,
+.hero-visual-mascot{
   width: 100%;
   height: auto;
+  object-fit: contain;
+  justify-self: center;
+  filter: drop-shadow(0 12px 26px rgba(0,0,0,0.38));
+}
+.hero-visual-missing{
+  max-width: min(100%, 240px);
+  max-height: 180px;
+}
+.hero-visual-mascot{
+  max-width: min(100%, 280px);
+  max-height: 200px;
+}
+.hero-visual-shot{
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
   border-radius: calc(var(--radius) + 2px);
   border: 1px solid var(--border);
   background: var(--panel);
   box-shadow: var(--shadow);
 }
-.hero-visual img{ max-height: 420px; object-fit: cover; }
+@media (max-width: 420px){
+  .hero-visual-duo{
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
 
-/* Vertical gradients soften band boundaries (no hard seam on the body backdrop) */
 .section{
   padding: 3.25rem 0;
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--surface-2) 65%, var(--surface)) 0%,
-    var(--surface) 22%,
-    var(--surface) 78%,
-    color-mix(in oklab, var(--surface-2) 65%, var(--surface)) 100%
-  );
+  background: var(--surface);
 }
 .doc-section{ padding: 3.35rem 0; }
 .section-alt{
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--surface) 65%, var(--surface-2)) 0%,
-    var(--surface-2) 22%,
-    var(--surface-2) 78%,
-    color-mix(in oklab, var(--surface) 65%, var(--surface-2)) 100%
-  );
+  background: var(--surface-2);
   border-top: 1px solid color-mix(in oklab, var(--border) 45%, transparent);
   border-bottom: 1px solid color-mix(in oklab, var(--border) 45%, transparent);
 }
@@ -1106,6 +991,24 @@ html[data-theme="light"] .site-header{
   font-size: 0.92rem;
 }
 
+.system-arch-figure{
+  margin: 1.05rem 0 0;
+}
+.system-arch-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius) + 2px);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+.system-arch-figure figcaption{
+  margin-top: 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .small{ font-size: 0.9rem; }
 
 /* Story cards / feature cards */
@@ -1132,6 +1035,12 @@ html[data-theme="light"] .site-header{
 
 .grid{ display: grid; gap: 1rem; }
 .grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Research section: methodology + technologies are full-width rows so the tech tile is not stretched beside a tall sibling */
+.research-overview-grid > article:nth-child(5),
+.research-overview-grid > article:nth-child(6){
+  grid-column: 1 / -1;
+}
 .grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card{
@@ -1198,7 +1107,6 @@ html[data-theme="light"] .site-header{
     0 1px 0 rgba(255,255,255,0.04) inset;
 }
 .form-control::placeholder{ color: color-mix(in oklab, var(--muted) 90%, transparent); }
-.form-help{ margin: 0.6rem 0 0; }
 .form-control[aria-invalid="true"]{
   border-color: color-mix(in oklab, #ef4444 55%, var(--border));
   box-shadow: 0 0 0 4px color-mix(in oklab, #ef4444 18%, transparent);
@@ -1272,7 +1180,7 @@ html[data-theme="light"] .site-header{
 .site-footer{
   padding: 1.75rem 0;
   border-top: 1px solid var(--border);
-  background: linear-gradient(180deg, color-mix(in oklab, var(--bg) 72%, transparent), color-mix(in oklab, var(--bg-2) 92%, transparent));
+  background: var(--bg);
 }
 .footer-inner{
   display: flex;
@@ -1373,7 +1281,6 @@ html[data-theme="light"] .site-header{
     width: 100%;
   }
   .stats-grid{ grid-template-columns: 1fr; }
-  .timeline-meta{ grid-template-columns: 1fr; }
 }
 
 /* Mobile menu: dim page behind panel + prevent background scroll */

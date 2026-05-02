@@ -397,21 +397,6 @@ function initRevealOnScroll() {
   els.forEach((el) => io.observe(el));
 }
 
-function initArchOptionalImages() {
-  $all("img.arch-optional-img").forEach((img) => {
-    const fallback = img.nextElementSibling;
-    if (!fallback || !fallback.classList.contains("arch-optional-fallback")) return;
-
-    const showFallback = () => {
-      img.setAttribute("hidden", "");
-      fallback.removeAttribute("hidden");
-    };
-
-    img.addEventListener("error", showFallback);
-    if (img.complete && img.naturalWidth === 0) showFallback();
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initYear();
@@ -422,6 +407,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactFormValidation();
   initBackToTop();
   initRevealOnScroll();
-  initArchOptionalImages();
 });
 
