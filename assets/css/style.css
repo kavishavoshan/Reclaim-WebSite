@@ -1456,7 +1456,22 @@ html[data-theme="light"] .doc-hero .eyebrow{
   .nav-links-scroll{ max-width: none; }
   .hero-highlights{ grid-template-columns: 1fr; }
   .stats-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .footer-grid{ grid-template-columns: 1fr; }
+  .footer-grid{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .site-footer .footer-col{
+    text-align: center;
+  }
+  .site-footer .footer-links{
+    justify-items: center;
+  }
+  .site-footer .footer-bottom{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
   /* Hamburger + drawer: tablets and phones (avoids cramped horizontal nav) */
   .nav-toggle{ display: inline-flex; }
