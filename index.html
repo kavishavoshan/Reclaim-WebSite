@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       name="description"
-      content="Unified AI lost-and-found platform: smarter matching, submission checks, CCTV-aware alerts, and device-side risk signals—one system for recovery and prevention."
+      content="Unified AI lost-and-found platform: smarter matching, submission checks, CCTV-aware alerts, and device behavior / risk prediction to prevent lost or stolen items—one system for recovery and prevention."
     />
     <title>AI-Enabled Lost and Found System with Adaptive Retrieval and Intelligent Security Monitoring | Research Project 2026</title>
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -38,6 +39,12 @@
           </button>
           <div id="nav-links" class="nav-links nav-links-scroll">
             <a href="#home" title="Home">Home</a>
+            <a
+              href="https://reclaim-rho.vercel.app/reclaim"
+              title="Open the Reclaim platform (new tab)"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Reclaim app</a>
             <a href="#about" title="About">About</a>
             <a href="#research" title="Research">Research</a>
             <a href="#milestones" title="Milestones">Milestones</a>
@@ -80,6 +87,12 @@
             <div class="hero-cta">
               <a class="btn btn-primary" href="#research">Explore Research</a>
               <a class="btn btn-ghost" href="#documents">View Documents</a>
+              <a
+                class="btn btn-secondary"
+                href="https://reclaim-rho.vercel.app/reclaim"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Open Reclaim platform</a>
             </div>
 
             <div class="hero-highlights" aria-label="Highlights">
@@ -92,12 +105,12 @@
                 <p class="muted">Sanity-checks photos, text, and voice together before bad data floods the catalog.</p>
               </article>
               <article class="card highlight-card">
-                <h3>Security Monitoring</h3>
+                <h3>Real-time suspicious behavior detection</h3>
                 <p class="muted">Turns live video into staff-facing cues about unusual movement and unattended objects.</p>
               </article>
               <article class="card highlight-card">
-                <h3>Risk Prediction</h3>
-                <p class="muted">Uses routine device behavior to highlight patterns that often precede a loss.</p>
+                <h3>Device behavior anomaly detection &amp; risk prediction</h3>
+                <p class="muted">Detects abnormal device behavior and predicts real-time risk to prevent lost or stolen items.</p>
               </article>
             </div>
           </div>
@@ -181,8 +194,9 @@
               <h3 class="doc-h3">AI-enabled framework</h3>
               <p class="muted">
                 The work packages four capabilities into one product-shaped system: <strong>uncertainty-aware retrieval</strong>,
-                <strong>multimodal validation</strong>, <strong>live behavior cues from video</strong>, and <strong>device-side risk signals</strong>.
-                Together they support both recovering items and reducing bad data and blind spots before losses harden.
+                <strong>multimodal validation</strong>, <strong>live behavior cues from video</strong>, and
+                <strong>Detects abnormal device behavior and predicts real-time risk to prevent lost or stolen items</strong>. Together they support both
+                recovering items and reducing bad data and blind spots before losses harden.
               </p>
 
               <h3 class="doc-h3 doc-h3-spaced">Project highlights</h3>
@@ -191,24 +205,32 @@
                 <li><strong>Combines image, text, voice, video, location, and device behavior data</strong></li>
                 <li><strong>Uses uncertainty-aware retrieval to improve matching reliability</strong></li>
                 <li><strong>Validates submissions before they enter the system</strong></li>
-                <li><strong>Detects suspicious behavior and predicts item loss risk in real time</strong></li>
+                <li>
+                  <strong>Detects suspicious behavior in real time.</strong> Detects abnormal device behavior and predicts real-time risk to prevent lost
+                  or stolen items.
+                </li>
               </ul>
             </div>
 
             <div class="doc-block reveal">
-              <h3 class="doc-h3">Platform UI</h3>
-              <p class="muted">Mission selection screen from the Reclaim web app (lost vs found reporting).</p>
-              <figure class="figure-placeholder" style="margin: 0.85rem 0 0;">
-                <img
-                  src="assets/images/WebStiteHomePage.png"
-                  width="1280"
-                  height="720"
-                  alt="Reclaim web app showing Select Your Mission with I Lost It and I Found It options"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption class="muted">Reclaim — "Select Your Mission" home screen.</figcaption>
-              </figure>
+              <a
+                class="platform-shot-link"
+                href="https://reclaim-rho.vercel.app/reclaim"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the live Reclaim platform on Vercel (new tab)"
+              >
+                <figure class="figure-placeholder">
+                  <img
+                    src="assets/images/WebStiteHomePage.png"
+                    width="1280"
+                    height="720"
+                    alt="Reclaim web app showing Select Your Mission with I Lost It and I Found It options"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </a>
             </div>
           </div>
         </div>
@@ -231,7 +253,9 @@
               <ol class="doc-objectives">
                 <li><strong>Matching</strong> — how lost and found reports are paired from what users provide.</li>
                 <li><strong>Validation</strong> — quick quality and consistency pass on multimodal submissions.</li>
-                <li><strong>Risk</strong> — a simple view of “higher / lower” loss risk from device-side behavior.</li>
+                <li>
+                  <strong>Anomaly detection &amp; risk prediction</strong> — Detects abnormal device behavior and predicts real-time risk analyses.
+                </li>
                 <li><strong>Alerts</strong> — how CCTV-style feeds surface attention-worthy moments to staff.</li>
               </ol>
 
@@ -247,15 +271,19 @@
 
             <div class="doc-block reveal">
               <h3 class="doc-h3">Demo video</h3>
-              <p class="muted">Opens the project demo on YouTube in a new tab.</p>
+              <p class="muted">
+                Hover the tile (or focus it with the keyboard) for a short muted preview. Click opens the full demo on YouTube in a new tab.
+              </p>
               <a
                 class="video-card"
                 href="https://youtu.be/fLmv90xrMNA"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Watch demo video on YouTube (opens in a new tab)"
+                data-hover-youtube="fLmv90xrMNA"
+                aria-label="Demo video: hover or focus for preview; click opens on YouTube in a new tab"
               >
                 <span class="video-card-inner">
+                  <span class="video-card-embed"></span>
                   <img
                     class="video-card-thumb"
                     src="https://img.youtube.com/vi/fLmv90xrMNA/maxresdefault.jpg"
@@ -606,12 +634,12 @@
               <p class="muted">Stops weak or conflicting submissions before they enter the shared catalog.</p>
             </article>
             <article class="card card-feature reveal">
-              <h3 class="doc-h3">Intelligent Security Monitoring</h3>
+              <h3 class="doc-h3">Real-time suspicious behavior detection</h3>
               <p class="muted">Gives operators a steadier read on the venue alongside user-submitted reports.</p>
             </article>
             <article class="card card-feature reveal">
-              <h3 class="doc-h3">Predictive Loss Prevention</h3>
-              <p class="muted">Adds a lightweight “something changed” signal from everyday device use.</p>
+              <h3 class="doc-h3">Device behavior anomaly detection &amp; risk prediction</h3>
+              <p class="muted">Detects abnormal device behavior and predicts real-time risk to prevent lost or stolen items.</p>
             </article>
           </div>
 
@@ -1085,6 +1113,9 @@
           <p class="footer-heading">Quick links</p>
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
+            <li>
+              <a href="https://reclaim-rho.vercel.app/reclaim" target="_blank" rel="noopener noreferrer">Reclaim platform</a>
+            </li>
             <li><a href="#about">About</a></li>
             <li><a href="#research">Research</a></li>
             <li><a href="#milestones">Milestones</a></li>

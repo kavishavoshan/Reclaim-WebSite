@@ -375,6 +375,104 @@ function initBackToTop() {
   onScroll();
 }
 
+function initVideoCardHoverPlay() {
+  const cards = $all("a.video-card[data-hover-youtube]");
+  if (!cards.length) return;
+
+  const canHover = () => window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  /** YouTube embeds need a real http(s) origin; file:// and opaque origins get Error 153. */
+  const canEmbedPreview = () => {
+    try {
+      const { protocol, origin } = window.location;
+      return (protocol === "https:" || protocol === "http:") && Boolean(origin) && origin !== "null";
+    } catch {
+      return false;
+    }
+  };
+
+  cards.forEach((card) => {
+    const id = String(card.getAttribute("data-hover-youtube") || "").trim();
+    if (!id) return;
+    const slot = card.querySelector(".video-card-embed");
+    if (!slot) return;
+
+    let iframe = null;
+    let leaveTimer = 0;
+
+    const clearLeaveTimer = () => {
+      if (leaveTimer) {
+        window.clearTimeout(leaveTimer);
+        leaveTimer = 0;
+      }
+    };
+
+    const stop = () => {
+      clearLeaveTimer();
+      card.classList.remove("is-hover-play");
+      if (iframe) {
+        try {
+          iframe.remove();
+        } catch {
+          // ignore
+        }
+        iframe = null;
+      }
+      slot.replaceChildren();
+    };
+
+    const start = () => {
+      if (prefersReducedMotion()) return;
+      if (!canEmbedPreview()) return;
+      clearLeaveTimer();
+      if (!iframe) {
+        iframe = document.createElement("iframe");
+        iframe.className = "video-card-iframe";
+        iframe.setAttribute("title", "Demo video preview (muted)");
+        iframe.setAttribute(
+          "allow",
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        );
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+        const src = new URL(`https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`);
+        src.searchParams.set("autoplay", "1");
+        src.searchParams.set("mute", "1");
+        src.searchParams.set("playsinline", "1");
+        src.searchParams.set("rel", "0");
+        src.searchParams.set("modestbranding", "1");
+        src.searchParams.set("origin", window.location.origin);
+        iframe.src = src.toString();
+        slot.appendChild(iframe);
+      }
+      card.classList.add("is-hover-play");
+    };
+
+    const scheduleStop = () => {
+      clearLeaveTimer();
+      leaveTimer = window.setTimeout(() => {
+        leaveTimer = 0;
+        stop();
+      }, 320);
+    };
+
+    if (canHover()) {
+      card.addEventListener("mouseenter", start);
+      card.addEventListener("mouseleave", scheduleStop);
+    }
+
+    card.addEventListener("focusin", () => {
+      if (prefersReducedMotion()) return;
+      start();
+    });
+    card.addEventListener("focusout", (e) => {
+      if (card.contains(e.relatedTarget)) return;
+      stop();
+    });
+  });
+}
+
 function initRevealOnScroll() {
   const els = $all(".reveal");
   if (!els.length) return;
@@ -406,6 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeaderScroll();
   initContactFormValidation();
   initBackToTop();
+  initVideoCardHoverPlay();
   initRevealOnScroll();
 });
 

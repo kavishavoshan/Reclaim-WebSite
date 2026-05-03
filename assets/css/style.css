@@ -527,6 +527,7 @@ html[data-theme="light"] .doc-hero .eyebrow{
   background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%);
   pointer-events: none;
   z-index: 0;
+  transition: opacity 220ms ease;
 }
 .video-card-thumb{
   position: absolute;
@@ -535,6 +536,38 @@ html[data-theme="light"] .doc-hero .eyebrow{
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  transition: opacity 220ms ease;
+}
+.video-card-embed{
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+.video-card-embed:empty{
+  display: none;
+}
+.video-card-embed:not(:empty){
+  display: block;
+}
+.video-card-embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.video-card.is-hover-play .video-card-embed:not(:empty){
+  opacity: 1;
+}
+.video-card.is-hover-play .video-card-thumb{
+  opacity: 0;
+}
+.video-card.is-hover-play .video-card-inner::after{
+  opacity: 0.15;
 }
 .video-play{
   width: 86px;
@@ -544,7 +577,12 @@ html[data-theme="light"] .doc-hero .eyebrow{
   border: 1px solid color-mix(in oklab, var(--brand) 45%, var(--border));
   box-shadow: 0 12px 24px rgba(0,0,0,0.24);
   position: relative;
-  z-index: 1;
+  z-index: 3;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.video-card.is-hover-play .video-play{
+  opacity: 0;
+  transform: scale(0.92);
 }
 .video-play::after{
   content: "";
@@ -567,7 +605,7 @@ html[data-theme="light"] .doc-hero .eyebrow{
   border: 1px solid rgba(255,255,255,0.14);
   background: color-mix(in oklab, var(--bg) 65%, transparent);
   backdrop-filter: blur(10px);
-  z-index: 1;
+  z-index: 3;
 }
 .video-title{
   display: block;
@@ -1104,6 +1142,23 @@ html[data-theme="light"] .doc-hero .eyebrow{
   color: white;
   background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 88%, white 0%), color-mix(in oklab, var(--brand-2) 88%, white 0%));
   border: 1px solid color-mix(in oklab, var(--brand) 55%, var(--border));
+}
+
+.platform-shot-link{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: calc(var(--radius) + 4px);
+}
+.platform-shot-link:hover{
+  text-decoration: none;
+}
+.platform-shot-link:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+.platform-shot-link .figure-placeholder{
+  margin: 0;
 }
 
 .figure-placeholder{
