@@ -206,7 +206,7 @@ function initMobileNav() {
   window.addEventListener(
     "resize",
     () => {
-      if (window.innerWidth > 760) close();
+      if (window.innerWidth > 900) close();
     },
     { passive: true }
   );
