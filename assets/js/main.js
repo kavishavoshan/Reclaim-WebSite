@@ -337,16 +337,26 @@ function initContactFormValidation() {
       return;
     }
 
+    const mailSubject = String(subject?.value || "").trim();
+    const mailBody = [
+      `Name: ${String(name?.value || "").trim()}`,
+      `Email: ${String(email?.value || "").trim()}`,
+      "",
+      "Message:",
+      String(message?.value || "").trim(),
+    ].join("\n");
+    const mailtoUrl = `mailto:reclaim703@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
     if (submitBtn) submitBtn.disabled = true;
     status.classList.add("form-status--success");
-    status.textContent = "Success — your message was recorded (demo mode). We will contact you via email.";
+    status.textContent = "Opening your email app with the message ready to send.";
+    window.location.href = mailtoUrl;
 
     window.setTimeout(() => {
-      form.reset();
       if (submitBtn) submitBtn.disabled = false;
       status.textContent = "";
       status.classList.remove("form-status--success");
-    }, 2200);
+    }, 3000);
   });
 }
 
